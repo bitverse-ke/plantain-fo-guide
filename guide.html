@@ -86,6 +86,19 @@ figure.fullbleed img { border-radius:0; }
 .callout p:last-child { margin-bottom:0; }
 .callout.gold { background:linear-gradient(135deg,#fdf6e3 0%,#f5e9c6 100%); border-left-color:var(--gold); }
 .callout.gold h4 { color:#8a6a1f; }
+
+/* Defect catalog — 2x4 grid with inline thumbnails */
+.defect-grid { display:grid; grid-template-columns:1fr 1fr; gap:10pt; margin-top:14pt; }
+.defect-card { background:#fff; border:1px solid #e6e0d0; border-radius:3pt; margin:0; padding:0; page-break-inside:avoid; overflow:hidden; }
+.defect-card img { width:100%; height:120pt; object-fit:cover; display:block; }
+.defect-card figcaption { padding:10pt 12pt; }
+.defect-card h4 { margin:0 0 4pt 0; font-family:'Playfair Display',serif; font-size:11pt; color:var(--green-deep); font-weight:700; }
+.defect-card p { margin:0 0 4pt 0; font-size:9pt; line-height:1.45; color:#333; }
+.defect-card p.action { margin-bottom:0; color:var(--green-deep); }
+.defect-card.urgent { border-left:4px solid var(--urgent); }
+.defect-card.urgent figcaption { background:linear-gradient(180deg,#fff 0%,#fff5f5 100%); }
+.defect-card { border-left:4px solid var(--gold); }
+.defect-card figcaption { background:linear-gradient(180deg,#fff 0%,#fffbf0 100%); }
 .callout.urgent { background:#fdf0ec; border-left-color:#c0392b; }
 .callout.urgent h4 { color:#c0392b; }
 
@@ -369,7 +382,7 @@ li::marker { color:var(--gold); font-weight:700; }
      PAGE 7 — SECTION 4 DIVIDER: Varieties
      ========================================================= -->
 <section class="divider">
-  <div class="divider-image" style="background-image:url('./illustrations/photos/banana_varieties.jpg');"></div>
+  <div class="divider-image" style="background-image:url('./illustrations/photos/variety_th.jpg');"></div>
   <div class="divider-content">
     <div class="divider-number">03</div>
     <div class="divider-tag">Section Four</div>
@@ -398,11 +411,11 @@ li::marker { color:var(--gold); font-weight:700; }
 
   <div class="photo-row-2">
     <figure>
-      <img src="./illustrations/photos/banana_varieties.jpg" alt="Banana varieties comparison">
+      <img src="./illustrations/photos/variety_th.jpg" alt="Banana varieties comparison">
       <div class="caption">A mixed display of cooking banana varieties — False Horn on the left with its incomplete hand, True Horn on the right showing the full complement of hands.</div>
     </figure>
     <figure>
-      <img src="./illustrations/photos/african_plantains.jpg" alt="African plantain varieties">
+      <img src="./illustrations/photos/variety_fh.jpg" alt="African plantain varieties">
       <div class="caption">False Horn varieties commonly grown in East Africa — note the larger individual fingers and the incomplete (horn-like) final hand.</div>
     </figure>
   </div>
@@ -438,9 +451,20 @@ li::marker { color:var(--gold); font-weight:700; }
   </div>
 
   <figure class="hero-strip">
-    <img src="./illustrations/photos/maturity_ripe_green.jpg" alt="Ripe and green plantain side by side">
-    <div class="caption">The two ends of the maturity scale — fully green (Stage 1) on the left, fully black-ripe (Stage 8) on the right. POP procures Stages 1–2 only.</div>
+    <img src="./illustrations/photos/maturity_green.jpg" alt="Green mature plantain">
+    <div class="caption">Stage 1 — green mature, hard, no give. This is what POP buys. Anything yellower is ripening, not procurement.</div>
   </figure>
+
+  <div class="photo-row-2" style="margin-top:8pt;">
+    <figure>
+      <img src="./illustrations/photos/maturity_ripe.jpg" alt="Ripe plantain">
+      <div class="caption">Stage 4 — yellow with brown flecks, soft. Already rejected by the time it looks like this.</div>
+    </figure>
+    <figure>
+      <img src="./illustrations/photos/maturity_overripe.jpg" alt="Overripe plantain">
+      <div class="caption">Stage 7+ — black, split peel. Retail / cooking loss. Reject at the farm.</div>
+    </figure>
+  </div>
 
   <p>Maturity is graded on a 9-stage scale defined by peel color, finger firmness, and starch content. POP procures at <strong>Stages 1–2 (green mature)</strong> only. Stage 3+ is for ripening rooms and direct retail — not procurement.</p>
 
@@ -469,7 +493,7 @@ li::marker { color:var(--gold); font-weight:700; }
      PAGE 10 — SECTION 6 DIVIDER: Grading
      ========================================================= -->
 <section class="divider">
-  <div class="divider-image" style="background-image:url('./illustrations/photos/african_plantains.jpg');"></div>
+  <div class="divider-image" style="background-image:url('./illustrations/photos/variety_fh.jpg');"></div>
   <div class="divider-content">
     <div class="divider-number">04</div>
     <div class="divider-tag">Section Six</div>
@@ -488,7 +512,7 @@ li::marker { color:var(--gold); font-weight:700; }
   </div>
 
   <figure class="hero-strip">
-    <img src="./illustrations/photos/banana_bunch_solo.jpg" alt="Single plantain bunch">
+    <img src="./illustrations/photos/cover_bunch.jpg" alt="Single plantain bunch">
     <div class="caption">A Grade A bunch — full, even, clean, fingers uniformly green mature. This is the benchmark the threshold table measures against.</div>
   </figure>
 
@@ -544,7 +568,7 @@ li::marker { color:var(--gold); font-weight:700; }
      PAGE 12 — SECTION 7 DIVIDER: Defect Catalog
      ========================================================= -->
 <section class="divider">
-  <div class="divider-image" style="background-image:url('./illustrations/photos/banana_disease.jpg');"></div>
+  <div class="divider-image" style="background-image:url('./illustrations/photos/defect_sigatoka.jpg');"></div>
   <div class="divider-content">
     <div class="divider-number">05</div>
     <div class="divider-tag">Section Seven</div>
@@ -563,53 +587,77 @@ li::marker { color:var(--gold); font-weight:700; }
   </div>
 
   <figure class="hero-strip">
-    <img src="./illustrations/photos/banana_disease.jpg" alt="Banana leaf disease">
+    <img src="./illustrations/photos/defect_sigatoka.jpg" alt="Banana leaf disease">
     <div class="caption">Banana diseases travel from leaf to fruit. A field showing leaf symptoms will produce diseased bunches — sample-inspect at the source, not at the depot.</div>
   </figure>
 
   <h3>The 8 defects to grade on</h3>
 
-  <div class="grid-2" style="margin-top:14pt;">
-    <div class="callout urgent">
-      <h4>1. Black Sigatoka</h4>
-      <p style="margin-bottom:4pt;"><strong>Symptoms:</strong> Black streaking on peel, premature ripening in patches, leaf streaks visible in field.</p>
-      <p style="margin-bottom:0;"><strong>Action:</strong> Reject the bunch. Photograph the leaf and the finger. Reject all fruit from that mat for the visit.</p>
-    </div>
-    <div class="callout urgent">
-      <h4>2. Banana Weevil damage</h4>
-      <p style="margin-bottom:4pt;"><strong>Symptoms:</strong> Tunnels in the corm, weakened stem, finger separation at the crown.</p>
-      <p style="margin-bottom:0;"><strong>Action:</strong> Reject. Mark the mat for the supervisor's follow-up — weevil spreads.</p>
-    </div>
-    <div class="callout">
-      <h4>3. Latex staining</h4>
-      <p style="margin-bottom:4pt;"><strong>Symptoms:</strong> Black-brown stains on fingers from sap oxidizing on the peel.</p>
-      <p style="margin-bottom:0;"><strong>Action:</strong> Cosmetic only if surface. Reject if staining covers &gt;30% of any finger or penetrates the peel.</p>
-    </div>
-    <div class="callout">
-      <h4>4. Mechanical damage</h4>
-      <p style="margin-bottom:4pt;"><strong>Symptoms:</strong> Bruising, cuts, finger separation, broken crown.</p>
-      <p style="margin-bottom:0;"><strong>Action:</strong> B if minor. C if multiple fingers affected. Reject if the crown is broken — it won't store.</p>
-    </div>
-    <div class="callout">
-      <h4>5. Thrips scarring</h4>
-      <p style="margin-bottom:4pt;"><strong>Symptoms:</strong> Raised silvery-brown corky patches on the peel between fingers.</p>
-      <p style="margin-bottom:0;"><strong>Action:</strong> B if isolated. C if pervasive. Not a reject — purely cosmetic.</p>
-    </div>
-    <div class="callout">
-      <h4>6. Sunburn / scald</h4>
-      <p style="margin-bottom:4pt;"><strong>Symptoms:</strong> Yellow or pale patch on the sunward side of the bunch.</p>
-      <p style="margin-bottom:0;"><strong>Action:</strong> B. Cosmetic only. Does not affect storage or cooking quality.</p>
-    </div>
-    <div class="callout urgent">
-      <h4>7. Crown rot / Anthracnose</h4>
-      <p style="margin-bottom:4pt;"><strong>Symptoms:</strong> Black soft rot at the crown, fingers detaching, dark lesions.</p>
-      <p style="margin-bottom:0;"><strong>Action:</strong> Reject. This is the most common cause of whole-load loss at the depot.</p>
-    </div>
-    <div class="callout urgent">
-      <h4>8. Bunchy top / viral</h4>
-      <p style="margin-bottom:4pt;"><strong>Symptoms:</strong> Stunted, narrow leaves in field; small, misshapen fingers.</p>
-      <p style="margin-bottom:0;"><strong>Action:</strong> Reject. Report the mat to the supervisor — viral diseases are notifiable.</p>
-    </div>
+  <div class="defect-grid">
+    <figure class="defect-card urgent">
+      <img src="./illustrations/photos/defect_sigatoka.jpg" alt="Black sigatoka">
+      <figcaption>
+        <h4>1. Black Sigatoka</h4>
+        <p><strong>Symptoms:</strong> Black streaking on peel, premature ripening in patches, leaf streaks visible in field.</p>
+        <p class="action"><strong>Action:</strong> Reject the bunch. Photograph the leaf and the finger. Reject all fruit from that mat for the visit.</p>
+      </figcaption>
+    </figure>
+    <figure class="defect-card urgent">
+      <img src="./illustrations/photos/defect_weevil.jpg" alt="Banana weevil damage">
+      <figcaption>
+        <h4>2. Banana Weevil damage</h4>
+        <p><strong>Symptoms:</strong> Tunnels in the corm, weakened stem, finger separation at the crown.</p>
+        <p class="action"><strong>Action:</strong> Reject. Mark the mat for the supervisor's follow-up — weevil spreads.</p>
+      </figcaption>
+    </figure>
+    <figure class="defect-card urgent">
+      <img src="./illustrations/photos/defect_crown_rot.jpg" alt="Crown rot">
+      <figcaption>
+        <h4>3. Crown rot / Anthracnose</h4>
+        <p><strong>Symptoms:</strong> Black soft rot at the crown, fingers detaching, dark lesions.</p>
+        <p class="action"><strong>Action:</strong> Reject. Most common cause of whole-load loss at the depot.</p>
+      </figcaption>
+    </figure>
+    <figure class="defect-card urgent">
+      <img src="./illustrations/photos/defect_bunchy_top.jpg" alt="Bunchy top virus">
+      <figcaption>
+        <h4>4. Bunchy top / viral</h4>
+        <p><strong>Symptoms:</strong> Stunted, narrow leaves in field; small, misshapen fingers.</p>
+        <p class="action"><strong>Action:</strong> Reject. Report the mat to the supervisor — viral diseases are notifiable.</p>
+      </figcaption>
+    </figure>
+    <figure class="defect-card">
+      <img src="./illustrations/photos/defect_pest_damage.jpg" alt="Pest damage">
+      <figcaption>
+        <h4>5. Pest damage (cosmetic)</h4>
+        <p><strong>Symptoms:</strong> Thrips scarring, raised silvery-brown corky patches on peel, surface scratches.</p>
+        <p class="action"><strong>Action:</strong> B if isolated. C if pervasive. Not a reject — purely cosmetic.</p>
+      </figcaption>
+    </figure>
+    <figure class="defect-card">
+      <img src="./illustrations/photos/maturity_overripe.jpg" alt="Overripe plantain">
+      <figcaption>
+        <h4>6. Overripe / stage 3+</h4>
+        <p><strong>Symptoms:</strong> Yellow peel, black spotting, finger feels soft, ripening has begun.</p>
+        <p class="action"><strong>Action:</strong> Reject. Cannot be stored or shipped. Different market (immediate retail).</p>
+      </figcaption>
+    </figure>
+    <figure class="defect-card">
+      <img src="./illustrations/photos/maturity_ripe.jpg" alt="Ripe plantain">
+      <figcaption>
+        <h4>7. Latex staining</h4>
+        <p><strong>Symptoms:</strong> Black-brown stains on fingers from sap oxidizing on the peel after cutting.</p>
+        <p class="action"><strong>Action:</strong> Cosmetic only if surface. Reject if staining covers &gt;30% of any finger.</p>
+      </figcaption>
+    </figure>
+    <figure class="defect-card">
+      <img src="./illustrations/photos/variety_th.jpg" alt="Mechanical damage">
+      <figcaption>
+        <h4>8. Mechanical / size</h4>
+        <p><strong>Symptoms:</strong> Bruising, cuts, finger separation, broken crown, undersized bunch.</p>
+        <p class="action"><strong>Action:</strong> B if minor. C if multiple fingers affected or bunch &lt;12 kg FH.</p>
+      </figcaption>
+    </figure>
   </div>
 
   <div class="pullquote">"A defect is not a judgment on the outgrower. It is a description of the bunch. Use neutral language: 'the peel shows latex staining,' not 'your bunch is stained.'"</div>
