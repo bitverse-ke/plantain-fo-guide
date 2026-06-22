@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .title { font-family: Georgia, serif; font-size: 18px; font-weight: bold; fill: #3e5a1f; }
+      .section { font-family: Helvetica, Arial, sans-serif; font-size: 12px; font-weight: bold; fill: #5d4a2e; }
+      .label { font-family: Helvetica, Arial, sans-serif; font-size: 10px; fill: #5d4a2e; }
+      .big-num { font-family: Georgia, serif; font-size: 28px; font-weight: bold; }
+    </style>
+  </defs>
+
+  <!-- Card background -->
+  <rect x="0" y="0" width="400" height="600" fill="#fbf6e8" stroke="#5d4a2e" stroke-width="3" rx="8"/>
+
+  <!-- Header band -->
+  <rect x="0" y="0" width="400" height="60" fill="#3e5a1f" rx="8"/>
+  <rect x="0" y="50" width="400" height="10" fill="#3e5a1f"/>
+  <text x="200" y="28" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="#fff">QUICK-REFERENCE CARD</text>
+  <text x="200" y="48" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#c8e090">Plantain Procurement • Tear-off • Keep on dashboard</text>
+
+  <!-- MATURITY -->
+  <text x="20" y="85" class="section">✓ ACCEPT — Stages 1–2 only</text>
+  <rect x="20" y="92" width="55" height="20" fill="#4a6b1f" rx="2"/>
+  <text x="47" y="106" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#fff" font-weight="bold">1</text>
+  <rect x="80" y="92" width="55" height="20" fill="#6b8932" rx="2"/>
+  <text x="107" y="106" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#fff" font-weight="bold">2</text>
+  <text x="145" y="106" class="label">Green, hard, angular. Latex flows when cut.</text>
+
+  <text x="20" y="130" class="section">⚠ DOWNGRADE — Stages 3–6 (ripening market)</text>
+  <rect x="20" y="137" width="42" height="16" fill="#9bb84a" rx="2"/>
+  <rect x="65" y="137" width="42" height="16" fill="#c5d870" rx="2"/>
+  <rect x="110" y="137" width="42" height="16" fill="#e8e082" rx="2"/>
+  <rect x="155" y="137" width="42" height="16" fill="#f0d960" rx="2"/>
+  <text x="41" y="149" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#1f2a0a" font-weight="bold">3</text>
+  <text x="86" y="149" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#1f2a0a" font-weight="bold">4</text>
+  <text x="131" y="149" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#1f2a0a" font-weight="bold">5</text>
+  <text x="176" y="149" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#1f2a0a" font-weight="bold">6</text>
+
+  <text x="20" y="172" class="section">✗ REJECT — Stages 7–9</text>
+  <rect x="20" y="179" width="55" height="16" fill="#d4a838" rx="2"/>
+  <rect x="80" y="179" width="55" height="16" fill="#a07830" rx="2"/>
+  <rect x="140" y="179" width="55" height="16" fill="#5d3a18" rx="2"/>
+  <text x="47" y="190" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#fff" font-weight="bold">7</text>
+  <text x="107" y="190" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#fff" font-weight="bold">8</text>
+  <text x="167" y="190" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#fff" font-weight="bold">9</text>
+
+  <!-- GRADES -->
+  <line x1="20" y1="210" x2="380" y2="210" stroke="#c4baa0" stroke-width="1"/>
+
+  <text x="20" y="232" class="section">BUNCH WEIGHT (False Horn / True Horn)</text>
+
+  <g transform="translate(20,242)">
+    <rect x="0" y="0" width="110" height="60" fill="#e8f4d0" stroke="#3e5a1f" stroke-width="1.5" rx="3"/>
+    <text x="55" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#3e5a1f">GRADE A</text>
+    <text x="55" y="38" text-anchor="middle" class="big-num" fill="#3e5a1f">20+ / 12+</text>
+    <text x="55" y="52" text-anchor="middle" class="label">kg per bunch</text>
+  </g>
+
+  <g transform="translate(140,242)">
+    <rect x="0" y="0" width="110" height="60" fill="#fff4c8" stroke="#a08940" stroke-width="1.5" rx="3"/>
+    <text x="55" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#7a6318">GRADE B</text>
+    <text x="55" y="38" text-anchor="middle" class="big-num" fill="#7a6318">12–20 / 8–12</text>
+    <text x="55" y="52" text-anchor="middle" class="label">kg per bunch</text>
+  </g>
+
+  <g transform="translate(260,242)">
+    <rect x="0" y="0" width="110" height="60" fill="#f5dcc8" stroke="#a05a30" stroke-width="1.5" rx="3"/>
+    <text x="55" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#7a3818">GRADE C</text>
+    <text x="55" y="38" text-anchor="middle" class="big-num" fill="#7a3818">&lt;12 / &lt;8</text>
+    <text x="55" y="52" text-anchor="middle" class="label">kg per bunch</text>
+  </g>
+
+  <!-- FINGER SIZE -->
+  <text x="20" y="320" class="section">FINGER LENGTH (FH / TH)</text>
+  <text x="20" y="338" class="label">A: 20+ / 25+ cm     B: 15–20 / 20–25 cm     C: &lt;15 / &lt;20 cm</text>
+
+  <!-- DEADLY DEFAULTS -->
+  <line x1="20" y1="350" x2="380" y2="350" stroke="#c4baa0" stroke-width="1"/>
+
+  <text x="20" y="372" class="section" fill="#a01818">✗ AUTO-REJECT — no negotiation</text>
+  <text x="20" y="390" class="label">• Black sigatoka on fruit     • Banana weevil tunnels in corm</text>
+  <text x="20" y="404" class="label">• BSV / streak virus pattern  • Maturity stage 5+ (too ripe)</text>
+  <text x="20" y="418" class="label">• Open wounds / cracked skin  • Stolen / unattributed bunches</text>
+
+  <!-- PRICING -->
+  <line x1="20" y1="432" x2="380" y2="432" stroke="#c4baa0" stroke-width="1"/>
+
+  <text x="20" y="454" class="section">PRICING RULES</text>
+  <text x="20" y="472" class="label">• Reference: daily price from POP app</text>
+  <text x="20" y="486" class="label">• FO band: ±5% around reference</text>
+  <text x="20" y="500" class="label">• Volume bonus: ≥200 kg Grade A equivalent from 1 outgrower</text>
+  <text x="20" y="514" class="label">• Shrinkage flag: net weight &gt;5% below farm weight</text>
+
+  <!-- CONTACT -->
+  <line x1="20" y1="528" x2="380" y2="528" stroke="#c4baa0" stroke-width="1"/>
+
+  <text x="20" y="548" class="section">ESCALATION</text>
+  <text x="20" y="566" class="label">Disputes &gt; 200 kg: SMS supervisor first, photo second.</text>
+  <text x="20" y="580" class="label">Outgrower safety / fraud: call the office — never argue on-farm.</text>
+
+  <text x="200" y="595" text-anchor="middle" class="label" font-style="italic">v1.0 • Plantain Outgrowers Portal</text>
+</svg>

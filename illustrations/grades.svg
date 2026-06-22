@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .grade { font-family: Georgia, serif; font-size: 36px; font-weight: bold; }
+      .title { font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight: bold; }
+      .desc { font-family: Helvetica, Arial, sans-serif; font-size: 10px; fill: #3a2810; }
+      .spec { font-family: Helvetica, Arial, sans-serif; font-size: 10px; fill: #5d4a2e; }
+    </style>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="22" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#3e5a1f">THREE-TIER GRADING AT A GLANCE</text>
+
+  <!-- ============ GRADE A ============ -->
+  <g transform="translate(20,50)">
+    <rect x="0" y="0" width="245" height="290" fill="#e8f4d0" stroke="#3e5a1f" stroke-width="2" rx="6"/>
+    <rect x="0" y="0" width="245" height="40" fill="#3e5a1f" rx="6"/>
+    <rect x="0" y="34" width="245" height="6" fill="#3e5a1f"/>
+    <text x="122" y="28" text-anchor="middle" class="grade" fill="#fff">GRADE A</text>
+
+    <!-- Plantain illustration -->
+    <g transform="translate(122,100)">
+      <path d="M 0 -45 C -5 -10, 5 25, 0 50" stroke="#5d4a2e" stroke-width="3" fill="none"/>
+      <ellipse cx="-25" cy="0" rx="6" ry="18" fill="#88a838" stroke="#3e5a1f" stroke-width="1" transform="rotate(-30)"/>
+      <ellipse cx="-12" cy="-3" rx="6" ry="22" fill="#88a838" stroke="#3e5a1f" stroke-width="1" transform="rotate(-10)"/>
+      <ellipse cx="0" cy="-5" rx="7" ry="24" fill="#88a838" stroke="#3e5a1f" stroke-width="1"/>
+      <ellipse cx="12" cy="-3" rx="6" ry="22" fill="#88a838" stroke="#3e5a1f" stroke-width="1" transform="rotate(10)"/>
+      <ellipse cx="25" cy="0" rx="6" ry="18" fill="#88a838" stroke="#3e5a1f" stroke-width="1" transform="rotate(30)"/>
+    </g>
+
+    <text x="122" y="180" text-anchor="middle" class="title" fill="#3e5a1f">PREMIUM</text>
+    <line x1="40" y1="190" x2="205" y2="190" stroke="#3e5a1f" stroke-width="1"/>
+
+    <text x="20" y="210" class="title">✓ Full hands present</text>
+    <text x="20" y="226" class="title">✓ Uniform fingers</text>
+    <text x="20" y="242" class="title">✓ No defects</text>
+    <text x="20" y="258" class="title">✓ Maturity stage 1–2</text>
+    <text x="20" y="278" class="spec" font-weight="bold">Bunch: ≥20 kg (FH) / ≥12 kg (TH)</text>
+  </g>
+
+  <!-- ============ GRADE B ============ -->
+  <g transform="translate(280,50)">
+    <rect x="0" y="0" width="245" height="290" fill="#fff4c8" stroke="#a08940" stroke-width="2" rx="6"/>
+    <rect x="0" y="0" width="245" height="40" fill="#a08940" rx="6"/>
+    <rect x="0" y="34" width="245" height="6" fill="#a08940"/>
+    <text x="122" y="28" text-anchor="middle" class="grade" fill="#fff">GRADE B</text>
+
+    <!-- Plantain illustration -->
+    <g transform="translate(122,100)">
+      <path d="M 0 -45 C -5 -10, 5 25, 0 50" stroke="#5d4a2e" stroke-width="3" fill="none"/>
+      <ellipse cx="-25" cy="0" rx="6" ry="18" fill="#88a838" stroke="#3e5a1f" stroke-width="1" transform="rotate(-30)"/>
+      <ellipse cx="-12" cy="-3" rx="6" ry="22" fill="#88a838" stroke="#3e5a1f" stroke-width="1" transform="rotate(-10)"/>
+      <ellipse cx="0" cy="-5" rx="7" ry="24" fill="#88a838" stroke="#3e5a1f" stroke-width="1"/>
+      <ellipse cx="12" cy="-3" rx="6" ry="22" fill="#88a838" stroke="#3e5a1f" stroke-width="1" transform="rotate(10)"/>
+      <ellipse cx="25" cy="0" rx="6" ry="18" fill="#88a838" stroke="#3e5a1f" stroke-width="1" transform="rotate(30)"/>
+      <!-- Light stain -->
+      <ellipse cx="-5" cy="0" rx="5" ry="3" fill="#5a3818" opacity="0.4"/>
+      <ellipse cx="8" cy="-8" rx="4" ry="2" fill="#5a3818" opacity="0.3"/>
+    </g>
+
+    <text x="122" y="180" text-anchor="middle" class="title" fill="#7a6318">STANDARD</text>
+    <line x1="40" y1="190" x2="205" y2="190" stroke="#a08940" stroke-width="1"/>
+
+    <text x="20" y="210" class="title">~ Most hands present</text>
+    <text x="20" y="226" class="title">~ Slightly uneven fingers</text>
+    <text x="20" y="242" class="title">~ Minor cosmetic only</text>
+    <text x="20" y="258" class="title">~ Stage 1–2 firm</text>
+    <text x="20" y="278" class="spec" font-weight="bold">Bunch: 12–20 kg (FH) / 8–12 kg (TH)</text>
+  </g>
+
+  <!-- ============ GRADE C ============ -->
+  <g transform="translate(540,50)">
+    <rect x="0" y="0" width="245" height="290" fill="#f5dcc8" stroke="#a05a30" stroke-width="2" rx="6"/>
+    <rect x="0" y="0" width="245" height="40" fill="#a05a30" rx="6"/>
+    <rect x="0" y="34" width="245" height="6" fill="#a05a30"/>
+    <text x="122" y="28" text-anchor="middle" class="grade" fill="#fff">GRADE C</text>
+
+    <!-- Plantain illustration -->
+    <g transform="translate(122,100)">
+      <path d="M 0 -45 C -5 -10, 5 25, 0 50" stroke="#5d4a2e" stroke-width="3" fill="none"/>
+      <!-- Smaller, fewer fingers -->
+      <ellipse cx="-20" cy="0" rx="5" ry="15" fill="#88a838" stroke="#3e5a1f" stroke-width="1" transform="rotate(-25)"/>
+      <ellipse cx="-8" cy="-2" rx="5" ry="18" fill="#88a838" stroke="#3e5a1f" stroke-width="1" transform="rotate(-8)"/>
+      <ellipse cx="6" cy="-3" rx="5" ry="20" fill="#88a838" stroke="#3e5a1f" stroke-width="1" transform="rotate(6)"/>
+      <ellipse cx="20" cy="0" rx="5" ry="16" fill="#88a838" stroke="#3e5a1f" stroke-width="1" transform="rotate(22)"/>
+      <!-- Heavy stain -->
+      <ellipse cx="-2" cy="5" rx="8" ry="5" fill="#5a3818" opacity="0.6"/>
+      <ellipse cx="10" cy="-5" rx="5" ry="3" fill="#5a3818" opacity="0.5"/>
+      <ellipse cx="-8" cy="-10" rx="4" ry="2" fill="#5a3818" opacity="0.4"/>
+    </g>
+
+    <text x="122" y="180" text-anchor="middle" class="title" fill="#7a3818">PROCESS / LOWER</text>
+    <line x1="40" y1="190" x2="205" y2="190" stroke="#a05a30" stroke-width="1"/>
+
+    <text x="20" y="210" class="title">— Incomplete hands</text>
+    <text x="20" y="226" class="title">— Irregular fingers</text>
+    <text x="20" y="242" class="title">— Visible defects OK</text>
+    <text x="20" y="258" class="title">— Stage 2–3 max</text>
+    <text x="20" y="278" class="spec" font-weight="bold">Bunch: &lt;12 kg (FH) / &lt;8 kg (TH)</text>
+  </g>
+</svg>

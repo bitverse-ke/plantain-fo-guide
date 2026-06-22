@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="finger2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a8c84a"/>
+      <stop offset="100%" stop-color="#6b8932"/>
+    </linearGradient>
+    <linearGradient id="fingerHorn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b8d458"/>
+      <stop offset="100%" stop-color="#7a9538"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ============ LEFT: FALSE HORN ============ -->
+  <g transform="translate(0,0)">
+    <!-- Section label -->
+    <rect x="20" y="20" width="360" height="40" fill="#e8f0d4" stroke="#6b8932" stroke-width="2" rx="4"/>
+    <text x="200" y="46" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#3e5a1f">FALSE HORN PLANTAIN</text>
+    <text x="200" y="76" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5d4a2e">5–8 hands • fingers small–medium • spiral arrangement</text>
+
+    <!-- Stalk -->
+    <path d="M 200 100 C 195 160, 205 220, 200 280 C 198 310, 202 330, 200 340"
+          stroke="#5d4a2e" stroke-width="8" fill="none" stroke-linecap="round"/>
+
+    <!-- Hand 1 -->
+    <g transform="translate(200,115)">
+      <ellipse cx="-30" cy="0" rx="11" ry="28" fill="url(#finger2)" transform="rotate(-18)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="-15" cy="-3" rx="12" ry="32" fill="url(#finger2)" transform="rotate(-7)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="0" cy="-5" rx="13" ry="34" fill="url(#finger2)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="15" cy="-3" rx="12" ry="32" fill="url(#finger2)" transform="rotate(7)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="30" cy="0" rx="11" ry="28" fill="url(#finger2)" transform="rotate(18)" stroke="#3e5a1f" stroke-width="1.2"/>
+    </g>
+
+    <!-- Hand 2 -->
+    <g transform="translate(200,160)">
+      <ellipse cx="-45" cy="3" rx="13" ry="38" fill="url(#finger2)" transform="rotate(-22)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="-28" cy="-2" rx="14" ry="42" fill="url(#finger2)" transform="rotate(-10)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="-10" cy="-5" rx="15" ry="46" fill="url(#finger2)" transform="rotate(-3)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="8" cy="-5" rx="15" ry="46" fill="url(#finger2)" transform="rotate(3)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="26" cy="-2" rx="14" ry="42" fill="url(#finger2)" transform="rotate(10)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="43" cy="3" rx="13" ry="38" fill="url(#finger2)" transform="rotate(22)" stroke="#3e5a1f" stroke-width="1.2"/>
+    </g>
+
+    <!-- Hand 3 (largest) -->
+    <g transform="translate(200,215)">
+      <ellipse cx="-65" cy="5" rx="14" ry="46" fill="url(#finger2)" transform="rotate(-25)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="-43" cy="0" rx="15" ry="50" fill="url(#finger2)" transform="rotate(-12)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="-22" cy="-3" rx="16" ry="54" fill="url(#finger2)" transform="rotate(-5)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="-2" cy="-5" rx="16" ry="56" fill="url(#finger2)" transform="rotate(-1)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="18" cy="-5" rx="16" ry="56" fill="url(#finger2)" transform="rotate(1)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="38" cy="-3" rx="16" ry="54" fill="url(#finger2)" transform="rotate(5)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="59" cy="0" rx="15" ry="50" fill="url(#finger2)" transform="rotate(12)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="80" cy="5" rx="14" ry="46" fill="url(#finger2)" transform="rotate(25)" stroke="#3e5a1f" stroke-width="1.2"/>
+    </g>
+
+    <!-- Hand 4 -->
+    <g transform="translate(200,275)">
+      <ellipse cx="-50" cy="5" rx="13" ry="38" fill="url(#finger2)" transform="rotate(-22)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="-30" cy="0" rx="14" ry="42" fill="url(#finger2)" transform="rotate(-10)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="-10" cy="-3" rx="15" ry="46" fill="url(#finger2)" transform="rotate(-3)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="10" cy="-3" rx="15" ry="46" fill="url(#finger2)" transform="rotate(3)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="30" cy="0" rx="14" ry="42" fill="url(#finger2)" transform="rotate(10)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="50" cy="5" rx="13" ry="38" fill="url(#finger2)" transform="rotate(22)" stroke="#3e5a1f" stroke-width="1.2"/>
+    </g>
+
+    <!-- Hand 5 -->
+    <g transform="translate(200,330)">
+      <ellipse cx="-35" cy="3" rx="12" ry="32" fill="url(#finger2)" transform="rotate(-20)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="-15" cy="0" rx="13" ry="36" fill="url(#finger2)" transform="rotate(-7)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="5" cy="-2" rx="14" ry="38" fill="url(#finger2)" transform="rotate(2)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="25" cy="0" rx="13" ry="36" fill="url(#finger2)" transform="rotate(7)" stroke="#3e5a1f" stroke-width="1.2"/>
+      <ellipse cx="42" cy="3" rx="12" ry="32" fill="url(#finger2)" transform="rotate(20)" stroke="#3e5a1f" stroke-width="1.2"/>
+    </g>
+
+    <!-- Spec callouts -->
+    <text x="20" y="135" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#3e5a1f" font-weight="bold">Bunch: 15–25 kg</text>
+    <text x="20" y="150" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#3e5a1f" font-weight="bold">Fingers: 18–22 cm</text>
+    <text x="320" y="135" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#3e5a1f" font-weight="bold">Hands: 5–8</text>
+    <text x="320" y="150" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#3e5a1f" font-weight="bold">Yield: medium-high</text>
+  </g>
+
+  <!-- ============ DIVIDER ============ -->
+  <line x1="400" y1="20" x2="400" y2="340" stroke="#c4baa0" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- ============ RIGHT: TRUE HORN ============ -->
+  <g transform="translate(400,0)">
+    <!-- Section label -->
+    <rect x="20" y="20" width="360" height="40" fill="#fff4d4" stroke="#b89438" stroke-width="2" rx="4"/>
+    <text x="200" y="46" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#7a6318">TRUE HORN PLANTAIN</text>
+    <text x="200" y="76" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5d4a2e">1–3 hands • fingers very large (horn-shaped) • compact bunch</text>
+
+    <!-- Stalk (shorter, thicker) -->
+    <path d="M 200 100 C 195 130, 205 160, 200 190 C 198 220, 202 250, 200 290"
+          stroke="#5d4a2e" stroke-width="9" fill="none" stroke-linecap="round"/>
+
+    <!-- Hand 1 (single, very large) -->
+    <g transform="translate(200,160)">
+      <!-- Big "horn" fingers -->
+      <ellipse cx="-95" cy="15" rx="14" ry="60" fill="url(#fingerHorn)" transform="rotate(-35)" stroke="#4f6320" stroke-width="1.5"/>
+      <ellipse cx="-65" cy="5" rx="16" ry="75" fill="url(#fingerHorn)" transform="rotate(-22)" stroke="#4f6320" stroke-width="1.5"/>
+      <ellipse cx="-30" cy="-3" rx="17" ry="85" fill="url(#fingerHorn)" transform="rotate(-10)" stroke="#4f6320" stroke-width="1.5"/>
+      <ellipse cx="5" cy="-5" rx="18" ry="92" fill="url(#fingerHorn)" stroke="#4f6320" stroke-width="1.5"/>
+      <ellipse cx="40" cy="-3" rx="17" ry="85" fill="url(#fingerHorn)" transform="rotate(10)" stroke="#4f6320" stroke-width="1.5"/>
+      <ellipse cx="75" cy="5" rx="16" ry="75" fill="url(#fingerHorn)" transform="rotate(22)" stroke="#4f6320" stroke-width="1.5"/>
+      <ellipse cx="105" cy="15" rx="14" ry="60" fill="url(#fingerHorn)" transform="rotate(35)" stroke="#4f6320" stroke-width="1.5"/>
+    </g>
+
+    <!-- Hand 2 -->
+    <g transform="translate(200,245)">
+      <ellipse cx="-60" cy="8" rx="13" ry="50" fill="url(#fingerHorn)" transform="rotate(-25)" stroke="#4f6320" stroke-width="1.5"/>
+      <ellipse cx="-35" cy="0" rx="14" ry="58" fill="url(#fingerHorn)" transform="rotate(-12)" stroke="#4f6320" stroke-width="1.5"/>
+      <ellipse cx="-10" cy="-3" rx="15" ry="62" fill="url(#fingerHorn)" transform="rotate(-4)" stroke="#4f6320" stroke-width="1.5"/>
+      <ellipse cx="15" cy="-3" rx="15" ry="62" fill="url(#fingerHorn)" transform="rotate(4)" stroke="#4f6320" stroke-width="1.5"/>
+      <ellipse cx="40" cy="0" rx="14" ry="58" fill="url(#fingerHorn)" transform="rotate(12)" stroke="#4f6320" stroke-width="1.5"/>
+      <ellipse cx="65" cy="8" rx="13" ry="50" fill="url(#fingerHorn)" transform="rotate(25)" stroke="#4f6320" stroke-width="1.5"/>
+    </g>
+
+    <!-- Spec callouts -->
+    <text x="20" y="135" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#7a6318" font-weight="bold">Bunch: 8–15 kg</text>
+    <text x="20" y="150" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#7a6318" font-weight="bold">Fingers: 25–35 cm</text>
+    <text x="320" y="135" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#7a6318" font-weight="bold">Hands: 1–3</text>
+    <text x="320" y="150" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#7a6318" font-weight="bold">Yield: high per finger</text>
+  </g>
+</svg>

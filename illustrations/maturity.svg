@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .label { font-family: Helvetica, Arial, sans-serif; font-size: 11px; fill: #5d4a2e; font-weight: bold; }
+      .small { font-family: Helvetica, Arial, sans-serif; font-size: 9px; fill: #5d4a2e; }
+      .stage { font-family: Helvetica, Arial, sans-serif; font-size: 13px; fill: #3e5a1f; font-weight: bold; }
+    </style>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="20" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#3e5a1f">PLANTAIN MATURITY SCALE (STAGES 1–9)</text>
+  <text x="450" y="38" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5d4a2e" font-style="italic">Stage 1–2 are the only acceptable stages for procurement as "green" plantain</text>
+
+  <!-- Stage boxes -->
+  <!-- Stage 1 -->
+  <g transform="translate(20,60)">
+    <rect x="0" y="0" width="90" height="160" fill="#4a6b1f" stroke="#2e4514" stroke-width="2" rx="4"/>
+    <ellipse cx="45" cy="80" rx="18" ry="65" fill="#6b8932" stroke="#3e5a1f" stroke-width="1.5"/>
+    <text x="45" y="22" text-anchor="middle" class="stage">1</text>
+    <text x="45" y="180" text-anchor="middle" class="label">Green</text>
+    <text x="45" y="194" text-anchor="middle" class="label">Hard, angular</text>
+    <text x="45" y="208" text-anchor="middle" class="small">Latex flows</text>
+  </g>
+
+  <!-- Stage 2 -->
+  <g transform="translate(115,60)">
+    <rect x="0" y="0" width="90" height="160" fill="#6b8932" stroke="#3e5a1f" stroke-width="2" rx="4"/>
+    <ellipse cx="45" cy="80" rx="20" ry="65" fill="#88a838" stroke="#3e5a1f" stroke-width="1.5"/>
+    <text x="45" y="22" text-anchor="middle" class="stage">2</text>
+    <text x="45" y="180" text-anchor="middle" class="label">Green</text>
+    <text x="45" y="194" text-anchor="middle" class="label">Slight rounding</text>
+    <text x="45" y="208" text-anchor="middle" class="small">Latex reduces</text>
+  </g>
+
+  <!-- Stage 3 -->
+  <g transform="translate(210,60)">
+    <rect x="0" y="0" width="90" height="160" fill="#9bb84a" stroke="#5d7a25" stroke-width="2" rx="4"/>
+    <ellipse cx="45" cy="80" rx="22" ry="65" fill="#b8d458" stroke="#5d7a25" stroke-width="1.5"/>
+    <text x="45" y="22" text-anchor="middle" class="stage">3</text>
+    <text x="45" y="180" text-anchor="middle" class="label">Pale green</text>
+    <text x="45" y="194" text-anchor="middle" class="label">Rounder</text>
+    <text x="45" y="208" text-anchor="middle" class="small">Edges turn yellow</text>
+  </g>
+
+  <!-- Stage 4 -->
+  <g transform="translate(305,60)">
+    <rect x="0" y="0" width="90" height="160" fill="#c5d870" stroke="#8a9c40" stroke-width="2" rx="4"/>
+    <ellipse cx="45" cy="80" rx="24" ry="65" fill="#dde58a" stroke="#8a9c40" stroke-width="1.5"/>
+    <text x="45" y="22" text-anchor="middle" class="stage">4</text>
+    <text x="45" y="180" text-anchor="middle" class="label">Yellow-green</text>
+    <text x="45" y="194" text-anchor="middle" class="label">More yellow</text>
+    <text x="45" y="208" text-anchor="middle" class="small">Fingers plumping</text>
+  </g>
+
+  <!-- Stage 5 -->
+  <g transform="translate(400,60)">
+    <rect x="0" y="0" width="90" height="160" fill="#e8e082" stroke="#a89c40" stroke-width="2" rx="4"/>
+    <ellipse cx="45" cy="80" rx="26" ry="65" fill="#f5ed9a" stroke="#a89c40" stroke-width="1.5"/>
+    <text x="45" y="22" text-anchor="middle" class="stage">5</text>
+    <text x="45" y="180" text-anchor="middle" class="label">Yellow +</text>
+    <text x="45" y="194" text-anchor="middle" class="label">Green tips</text>
+    <text x="45" y="208" text-anchor="middle" class="small">Edible ripe soon</text>
+  </g>
+
+  <!-- Stage 6 -->
+  <g transform="translate(495,60)">
+    <rect x="0" y="0" width="90" height="160" fill="#f0d960" stroke="#a08520" stroke-width="2" rx="4"/>
+    <ellipse cx="45" cy="80" rx="28" ry="65" fill="#f8e88a" stroke="#a08520" stroke-width="1.5"/>
+    <text x="45" y="22" text-anchor="middle" class="stage">6</text>
+    <text x="45" y="180" text-anchor="middle" class="label">All yellow</text>
+    <text x="45" y="194" text-anchor="middle" class="label">Firm ripe</text>
+    <text x="45" y="208" text-anchor="middle" class="small">Sweet, soft inside</text>
+  </g>
+
+  <!-- Stage 7 -->
+  <g transform="translate(590,60)">
+    <rect x="0" y="0" width="90" height="160" fill="#d4a838" stroke="#8a6c20" stroke-width="2" rx="4"/>
+    <ellipse cx="45" cy="80" rx="30" ry="65" fill="#e8c060" stroke="#8a6c20" stroke-width="1.5"/>
+    <g fill="#6b4a18">
+      <circle cx="35" cy="60" r="2"/>
+      <circle cx="55" cy="75" r="2"/>
+      <circle cx="40" cy="95" r="2.5"/>
+      <circle cx="50" cy="110" r="2"/>
+    </g>
+    <text x="45" y="22" text-anchor="middle" class="stage">7</text>
+    <text x="45" y="180" text-anchor="middle" class="label">Yellow +</text>
+    <text x="45" y="194" text-anchor="middle" class="label">Brown spots</text>
+    <text x="45" y="208" text-anchor="middle" class="small">Very ripe</text>
+  </g>
+
+  <!-- Stage 8 -->
+  <g transform="translate(685,60)">
+    <rect x="0" y="0" width="90" height="160" fill="#a07830" stroke="#6b4c18" stroke-width="2" rx="4"/>
+    <ellipse cx="45" cy="80" rx="32" ry="65" fill="#c89548" stroke="#6b4c18" stroke-width="1.5"/>
+    <g fill="#4a3414">
+      <ellipse cx="35" cy="65" rx="6" ry="4"/>
+      <ellipse cx="55" cy="80" rx="5" ry="3"/>
+      <ellipse cx="40" cy="100" rx="7" ry="5"/>
+      <ellipse cx="50" cy="115" rx="4" ry="3"/>
+    </g>
+    <text x="45" y="22" text-anchor="middle" fill="#fff" class="stage">8</text>
+    <text x="45" y="180" text-anchor="middle" class="label">Brown-yellow</text>
+    <text x="45" y="194" text-anchor="middle" class="label">Patches</text>
+    <text x="45" y="208" text-anchor="middle" class="small">Process only</text>
+  </g>
+
+  <!-- Stage 9 -->
+  <g transform="translate(780,60)">
+    <rect x="0" y="0" width="90" height="160" fill="#5d3a18" stroke="#3a2410" stroke-width="2" rx="4"/>
+    <ellipse cx="45" cy="80" rx="34" ry="65" fill="#7a4f25" stroke="#3a2410" stroke-width="1.5"/>
+    <text x="45" y="22" text-anchor="middle" fill="#fff" class="stage">9</text>
+    <text x="45" y="180" text-anchor="middle" class="label">Brown</text>
+    <text x="45" y="194" text-anchor="middle" class="label">Soft, overripe</text>
+    <text x="45" y="208" text-anchor="middle" class="small">Reject</text>
+  </g>
+
+  <!-- Acceptability band -->
+  <rect x="20" y="232" width="185" height="14" fill="#a8c84a" stroke="#3e5a1f" stroke-width="1"/>
+  <text x="112" y="242" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1f2a0a" font-weight="bold">✓ ACCEPT (stages 1–2)</text>
+
+  <rect x="210" y="232" width="375" height="14" fill="#fff4c8" stroke="#a08940" stroke-width="1"/>
+  <text x="397" y="242" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#5d4a2e" font-weight="bold">⚠ DOWNGRADE / RIPENING MARKET (stages 3–6)</text>
+
+  <rect x="590" y="232" width="280" height="14" fill="#e8c8a8" stroke="#8a5a30" stroke-width="1"/>
+  <text x="730" y="242" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#5d2a08" font-weight="bold">✗ REJECT (stages 7–9)</text>
+</svg>
