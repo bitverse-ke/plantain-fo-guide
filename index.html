@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Plantain Procurement & Grading — Field Officer Guide</title>
+<style>
+@font-face { font-family:"Inter"; font-weight:400; src:url("./illustrations/fonts/Inter-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf") format("truetype"); }
+@font-face { font-family:"Inter"; font-weight:500; src:url("./illustrations/fonts/Inter-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf") format("truetype"); }
+@font-face { font-family:"Inter"; font-weight:600; src:url("./illustrations/fonts/Inter-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf") format("truetype"); }
+@font-face { font-family:"Inter"; font-weight:700; src:url("./illustrations/fonts/Inter-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf") format("truetype"); }
+@font-face { font-family:"Playfair Display"; font-weight:400; src:url("./illustrations/fonts/Playfair-nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvUDQ.ttf") format("truetype"); }
+@font-face { font-family:"Playfair Display"; font-weight:700; src:url("./illustrations/fonts/Playfair-nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiukDQ.ttf") format("truetype"); }
+@font-face { font-family:"Playfair Display"; font-weight:900; src:url("./illustrations/fonts/Playfair-nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKfsukDQ.ttf") format("truetype"); }
+
+@page {
+  size: A4 portrait;
+  margin: 22mm 18mm 24mm 18mm;
+  @top-left { content:"Plantain Procurement & Grading"; font-family:"Inter",sans-serif; font-weight:500; font-size:8.5pt; color:#6b8932; letter-spacing:0.5px; }
+  @top-right { content:"POP · Field Officer · v1.0"; font-family:"Inter",sans-serif; font-weight:500; font-size:8.5pt; color:#6b8932; letter-spacing:0.5px; }
+  @bottom-center { content:counter(page) "  /  " counter(pages); font-family:"Playfair Display",serif; font-style:italic; font-size:9pt; color:#6b8932; }
+}
+@page :first { margin:0; @top-left{content:"";} @top-right{content:"";} @bottom-center{content:"";} }
+@page quickcard { margin:0; @top-left{content:"";} @top-right{content:"";} @bottom-center{content:"";} }
+
+:root { --green-deep:#2d5016; --green-mid:#4a7325; --green-soft:#6b8932; --gold:#c89d3b; --gold-light:#e8d49a; --cream:#faf7f0; --cream-deep:#f0eadf; --sage:#e8efe5; --charcoal:#2c2c2c; --warm-gray:#5c5854; }
+
+* { box-sizing:border-box; }
+html,body { margin:0; padding:0; font-family:"Inter","Helvetica Neue",Arial,sans-serif; font-size:10pt; line-height:1.55; color:var(--charcoal); background:#fff; }
+
+h1,h2,h3,h4 { font-family:"Playfair Display",Georgia,serif; color:var(--green-deep); margin:0; page-break-after:avoid; font-weight:700; letter-spacing:-0.5px; }
+h1 { font-size:36pt; line-height:1.05; font-weight:900; }
+h2 { font-size:22pt; line-height:1.15; margin-bottom:8pt; }
+h3 { font-size:14pt; line-height:1.25; margin-bottom:4pt; color:var(--green-mid); }
+h4 { font-size:11pt; font-family:"Inter",sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--green-soft); margin-bottom:6pt; }
+p { margin:0 0 9pt 0; }
+.lead { font-family:"Playfair Display",Georgia,serif; font-style:italic; font-size:13pt; line-height:1.45; color:var(--warm-gray); }
+.pullquote { font-family:"Playfair Display",Georgia,serif; font-style:italic; font-size:15pt; line-height:1.35; color:var(--green-deep); border-left:3px solid var(--gold); padding:8pt 0 8pt 14pt; margin:14pt 0 16pt 0; page-break-inside:avoid; }
+.caption { font-family:"Inter",sans-serif; font-style:italic; font-size:8.5pt; color:var(--warm-gray); margin:4pt 0 0 0; line-height:1.35; }
+.eyebrow { font-family:"Inter",sans-serif; font-weight:600; font-size:9pt; text-transform:uppercase; letter-spacing:2.5px; color:var(--gold); }
+strong,b { color:var(--green-deep); font-weight:700; }
+
+.page-break { page-break-after:always; }
+.no-break { page-break-inside:avoid; }
+.grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:14pt; }
+.grid-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10pt; }
+.grid-4 { display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:8pt; }
+
+/* COVER */
+.cover { page-break-after:always; height:297mm; width:210mm; position:relative; overflow:hidden; margin:0; padding:0; }
+.cover-image { position:absolute; inset:0; background-image:url("./illustrations/photos/cover_bunch.jpg"); background-size:cover; background-position:center; z-index:1; }
+.cover-image::after { content:""; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(45,80,22,0.55) 0%, rgba(45,80,22,0.25) 35%, rgba(20,35,10,0.78) 100%); }
+.cover-content { position:absolute; inset:0; z-index:2; padding:28mm 22mm; display:flex; flex-direction:column; justify-content:space-between; color:#fff; }
+.cover-top { display:flex; justify-content:space-between; align-items:flex-start; font-family:"Inter",sans-serif; font-weight:500; font-size:9pt; text-transform:uppercase; letter-spacing:3px; opacity:0.85; }
+.cover-mark { display:flex; align-items:center; gap:8pt; }
+.cover-mark::before { content:""; width:24pt; height:1.5pt; background:var(--gold); }
+.cover-title { font-family:"Playfair Display",Georgia,serif; font-size:54pt; font-weight:900; line-height:0.95; letter-spacing:-2px; margin:0 0 14pt 0; text-shadow:0 2px 12px rgba(0,0,0,0.3); }
+.cover-subtitle { font-family:"Playfair Display",Georgia,serif; font-style:italic; font-weight:400; font-size:20pt; line-height:1.2; color:var(--gold-light); margin:0 0 24pt 0; text-shadow:0 1px 6px rgba(0,0,0,0.4); }
+.cover-rule { width:60pt; height:2pt; background:var(--gold); margin:0 0 18pt 0; }
+.cover-meta { display:flex; flex-direction:column; gap:4pt; font-family:"Inter",sans-serif; font-size:10pt; line-height:1.5; letter-spacing:0.5px; }
+.cover-meta strong { color:#fff; font-weight:700; font-size:11pt; letter-spacing:1px; }
+.cover-bottom { display:flex; justify-content:space-between; align-items:flex-end; font-family:"Inter",sans-serif; font-size:8.5pt; opacity:0.75; letter-spacing:0.5px; }
+
+/* SECTION DIVIDER */
+.divider { page-break-before:always; page-break-after:always; height:251mm; width:100%; position:relative; overflow:hidden; display:flex; align-items:center; background:var(--green-deep); color:#fff; }
+.divider-image { position:absolute; inset:0; background-size:cover; background-position:center; opacity:0.32; }
+.divider-content { position:relative; padding:0 24mm; max-width:80%; }
+.divider-number { font-family:"Playfair Display",serif; font-size:96pt; font-weight:900; color:var(--gold); line-height:1; margin-bottom:12pt; opacity:0.85; }
+.divider-title { font-family:"Playfair Display",serif; font-size:36pt; font-weight:700; line-height:1.05; letter-spacing:-1px; color:#fff; margin-bottom:16pt; }
+.divider-rule { width:80pt; height:2pt; background:var(--gold); margin-bottom:18pt; }
+.divider-tag { font-family:"Inter",sans-serif; font-weight:500; font-size:11pt; letter-spacing:1.5px; color:var(--gold-light); text-transform:uppercase; }
+
+.section-header { margin-bottom:18pt; }
+.section-header .eyebrow { display:block; margin-bottom:6pt; }
+.section-header h2 { border-bottom:2px solid var(--gold); padding-bottom:6pt; }
+
+figure { margin:0; padding:0; page-break-inside:avoid; }
+figure img { display:block; width:100%; height:auto; border-radius:2pt; }
+figure.fullbleed { margin-left:-18mm; margin-right:-18mm; width:calc(100% + 36mm); }
+figure.fullbleed img { border-radius:0; }
+
+.photo-row-2 { display:grid; grid-template-columns:1fr 1fr; gap:10pt; page-break-inside:avoid; }
+.photo-row-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:8pt; page-break-inside:avoid; }
+
+.callout { background:var(--sage); border-left:4px solid var(--green-soft); padding:12pt 14pt; margin:12pt 0; page-break-inside:avoid; border-radius:0 2pt 2pt 0; }
+.callout h4 { margin-top:0; color:var(--green-deep); }
+.callout p:last-child { margin-bottom:0; }
+.callout.gold { background:linear-gradient(135deg,#fdf6e3 0%,#f5e9c6 100%); border-left-color:var(--gold); }
+.callout.gold h4 { color:#8a6a1f; }
+.callout.urgent { background:#fdf0ec; border-left-color:#c0392b; }
+.callout.urgent h4 { color:#c0392b; }
+
+table { width:100%; border-collapse:collapse; margin:10pt 0; page-break-inside:avoid; font-size:9.5pt; }
+th { background:var(--green-deep); color:#fff; padding:8pt 10pt; text-align:left; font-family:"Inter",sans-serif; font-weight:600; font-size:9pt; text-transform:uppercase; letter-spacing:0.5px; }
+td { padding:7pt 10pt; border-bottom:1px solid var(--cream-deep); vertical-align:top; }
+tr:nth-child(even) td { background:var(--cream); }
+tr:last-child td { border-bottom:2px solid var(--green-soft); }
+
+ul,ol { margin:6pt 0 12pt 0; padding-left:18pt; }
+li { margin-bottom:4pt; line-height:1.5; }
+li::marker { color:var(--gold); font-weight:700; }
+
+.steps { counter-reset:step; }
+.step { counter-increment:step; position:relative; padding-left:40pt; margin-bottom:14pt; page-break-inside:avoid; }
+.step::before { content:counter(step); position:absolute; left:0; top:-2pt; width:28pt; height:28pt; background:var(--gold); color:var(--green-deep); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:"Playfair Display",serif; font-weight:900; font-size:13pt; }
+.step h4 { color:var(--green-deep); margin-top:2pt; margin-bottom:4pt; }
+
+.hero-strip { margin:0 0 18pt 0; page-break-inside:avoid; }
+.hero-strip img { width:100%; height:60mm; object-fit:cover; object-position:center; border-radius:2pt; }
+.hero-strip .caption { margin-top:4pt; text-align:center; }
+
+.photo-credit { font-family:"Inter",sans-serif; font-size:7.5pt; color:#999; font-style:italic; margin-top:2pt; }
+.endnote { margin-top:24pt; padding-top:12pt; border-top:1px solid var(--cream-deep); font-family:"Inter",sans-serif; font-size:8.5pt; color:var(--warm-gray); font-style:italic; }
+
+.quickcard-page { page:quickcard; page-break-before:always; width:210mm; height:297mm; margin:0; padding:0; background:var(--cream); position:relative; overflow:hidden; }
+.quickcard-page::before { content:""; position:absolute; top:8mm; left:8mm; right:8mm; bottom:8mm; border:2pt dashed var(--gold); border-radius:4pt; }
+.quickcard { width:100%; height:100%; padding:18mm 16mm; display:flex; flex-direction:column; }
+.quickcard-head { text-align:center; margin-bottom:10pt; }
+.quickcard-head .eyebrow { display:block; margin-bottom:4pt; }
+.quickcard-head h2 { font-size:18pt; border:none; padding:0; margin:0; }
+.quickcard-body { flex:1; display:grid; grid-template-columns:1fr 1fr; gap:10pt; }
+.quickcard-col h4 { color:var(--green-deep); margin-top:0; margin-bottom:4pt; font-size:9.5pt; }
+.quickcard-col ul { margin:0 0 8pt 0; padding-left:14pt; font-size:8.5pt; line-height:1.4; }
+.quickcard-col li { margin-bottom:2pt; }
+.quickcard-foot { margin-top:8pt; text-align:center; font-family:"Playfair Display",serif; font-style:italic; font-size:9pt; color:var(--green-mid); }
+</style>
+</head>
+<body>
+
+<!-- =========================================================
+     PAGE 1 — COVER
+     ========================================================= -->
+<section class="cover">
+  <div class="cover-image"></div>
+  <div class="cover-content">
+    <div class="cover-top">
+      <div class="cover-mark">Plantain Outgrowers Portal</div>
+      <div>Field Officer Edition · v1.0</div>
+    </div>
+    <div>
+      <div class="cover-title">Plantain<br>Procurement<br>&amp; Grading</div>
+      <div class="cover-subtitle">A field guide for buying and grading<br>True Horn &amp; False Horn plantain</div>
+      <div class="cover-rule"></div>
+      <div class="cover-meta">
+        <strong>Bitverse · Plantain Outgrowers Portal</strong>
+        Bitverse Agro · Nairobi · June 2026
+      </div>
+    </div>
+    <div class="cover-bottom">
+      <div>For internal Field Officer use</div>
+      <div class="photo-credit">Cover photo: Wikimedia Commons</div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     PAGE 2 — FOREWORD
+     ========================================================= -->
+<section class="page-break">
+  <div class="eyebrow">Foreword</div>
+  <h1 style="margin-top:8pt; margin-bottom:16pt; font-size:32pt; line-height:1;">Buying plantain<br>is not just weighing.</h1>
+
+  <p class="lead" style="margin-bottom:18pt;">This guide exists because the difference between a fair price and a cheated one — between a good bunch and a rejectable one — lives in the field, at the moment of weighing, in the eye and the hand of the Field Officer.</p>
+
+  <figure class="fullbleed" style="margin-bottom:14pt;">
+    <img src="./illustrations/photos/matoke_context.jpg" alt="Matoke market in Kampala">
+    <div class="caption">A plantain market in East Africa — the context where procurement decisions land.</div>
+  </figure>
+
+  <p>The Plantain Outgrowers Portal (POP) buys cooking plantain — False Horn and True Horn — from smallholder outgrowers across our network, then resells into urban wholesale markets. Every kilogram we procure passes through a Field Officer who decides its grade, its price, and whether it moves at all.</p>
+
+  <p>That decision has three downstream effects:</p>
+
+  <div class="callout">
+    <h4>What a Field Officer's call decides</h4>
+    <ul style="margin-bottom:0;">
+      <li><strong>The outgrower's income</strong> — a Grade A pays KES 20/kg more than a Grade C. The same bunch, two readings.</li>
+      <li><strong>Our market's reputation</strong> — bad grading at intake becomes a complaint at the wholesale floor.</li>
+      <li><strong>The Portal's integrity</strong> — every rejection must be defensible. Every acceptance must be defensible.</li>
+    </ul>
+  </div>
+
+  <p>So this is not a manual. It is a record of how POP expects a Field Officer to read a bunch, talk to an outgrower, weigh, record, and decide. Read it once before your first procurement. Read it again before your first dispute.</p>
+
+  <div class="pullquote">"Reject the bunch, not the outgrower. Document every rejection. Defend every acceptance."</div>
+
+  <h3 style="margin-top:22pt;">How to use this guide</h3>
+  <div class="grid-2">
+    <div><p style="margin-bottom:6pt;"><strong>Before each visit.</strong> Read the section that matches the task — pricing band, shrinkage rules, defect catalog.</p></div>
+    <div><p style="margin-bottom:6pt;"><strong>During the visit.</strong> Keep the tear-off quick card on the last page in your pocket.</p></div>
+    <div><p style="margin-bottom:6pt;"><strong>After the visit.</strong> Use the rejection language in Section 10 if any bunch is refused.</p></div>
+    <div><p style="margin-bottom:6pt;"><strong>When in doubt.</strong> Photo + measure + record. Disputes resolve on data, not memory.</p></div>
+  </div>
+
+  <div class="endnote">This is version 1.0, June 2026. As POP grows — new varieties, new markets, new procurement zones — this guide will grow with it. Send corrections and field notes to your supervisor. The next edition is built from this one.</div>
+</section>
+
+<!-- =========================================================
+     PAGE 3 — SECTION 1 DIVIDER
+     ========================================================= -->
+<section class="divider">
+  <div class="divider-image" style="background-image:url('./illustrations/photos/visit_farmer.jpg');"></div>
+  <div class="divider-content">
+    <div class="divider-number">01</div>
+    <div class="divider-tag">Section One</div>
+    <div class="divider-rule"></div>
+    <div class="divider-title">Role &amp; Mindset</div>
+  </div>
+</section>
+
+<!-- =========================================================
+     PAGE 4 — SECTION 1 CONTENT
+     ========================================================= -->
+<section class="page-break">
+  <div class="section-header">
+    <span class="eyebrow">Section One</span>
+    <h2>Role &amp; Mindset</h2>
+  </div>
+
+  <p>The Field Officer is not a buyer, not a salesperson, and not a quality inspector who happens to also pay. The role is a single thing: <strong>the trusted reader of the bunch, in the outgrower's field, on POP's behalf.</strong></p>
+
+  <h3 style="margin-top:18pt;">The three overriding rules</h3>
+
+  <div class="callout gold" style="margin-top:8pt;">
+    <h4>1. The price is set before you arrive.</h4>
+    <p style="margin-bottom:0;">The day's reference price was pulled from the app at 6 am. Your job is to apply it within the ±5% band — not to negotiate the price itself. If the outgrower wants a different price, the answer is "the daily price is what I pay; I can discuss the grade, which moves the price."</p>
+  </div>
+
+  <div class="callout" style="margin-top:8pt;">
+    <h4>2. The grade is what they brought, not what you need.</h4>
+    <p style="margin-bottom:0;">Do not adjust a grade to meet a quota. Do not upgrade a B to an A to be polite. If you cannot defend the grade on a photo and a measurement, the grade is wrong.</p>
+  </div>
+
+  <div class="callout urgent" style="margin-top:8pt;">
+    <h4>3. The relationship outlives the bunch.</h4>
+    <p style="margin-bottom:0;">This outgrower will be selling to POP next month, next season, next year. A bad day at the scale costs more than one bunch's worth of savings. Be firm on grading. Be fair on price. Be polite, always.</p>
+  </div>
+
+  <h3 style="margin-top:22pt;">First 30 seconds</h3>
+  <p>When you arrive, you set the tone for the entire visit. Three things happen in the first 30 seconds:</p>
+
+  <div class="steps">
+    <div class="step">
+      <h4>Greet, by name if you can.</h4>
+      <p>"Jambo, Mama Wanjiku. I'm here for the bunch you signaled." Using the outgrower's name — or asking for it — is the cheapest relationship investment you'll make all week.</p>
+    </div>
+    <div class="step">
+      <h4>State the day's reference price.</h4>
+      <p>"Today's price for Grade A is KES 32/kg. I'll weigh, grade, and pay against that." Outgrowers who know the price in advance trust the transaction. Outgrowers who don't, suspect the transaction.</p>
+    </div>
+    <div class="step">
+      <h4>Ask permission to walk the field.</h4>
+      <p>"I'd like to see the bunches before we start." This is professional, not invasive. It also lets you spot whether the bunches in the signal are the best ones or the worst ones.</p>
+    </div>
+  </div>
+
+  <div class="pullquote">"You are POP at the farm gate. Everything about how POP is perceived — fairness, competence, care — is read off you in the first 30 seconds."</div>
+</section>
+
+<!-- =========================================================
+     PAGE 5 — SECTION 2 DIVIDER + CONTENT
+     ========================================================= -->
+<section class="divider">
+  <div class="divider-image" style="background-image:url('./illustrations/photos/harvest_action.jpg');"></div>
+  <div class="divider-content">
+    <div class="divider-number">02</div>
+    <div class="divider-tag">Section Two</div>
+    <div class="divider-rule"></div>
+    <div class="divider-title">Pre-Visit Prep</div>
+  </div>
+</section>
+
+<section class="page-break">
+  <div class="section-header">
+    <span class="eyebrow">Section Two</span>
+    <h2>Pre-Visit Preparation</h2>
+  </div>
+
+  <figure class="hero-strip">
+    <img src="./illustrations/photos/harvest_action.jpg" alt="Plantain transport">
+    <div class="caption">Every visit starts the night before. A Field Officer who arrives unprepared pays for it in slower decisions and weaker records.</div>
+  </figure>
+
+  <h3>The night before</h3>
+  <ul>
+    <li><strong>Pull today's reference price</strong> from the POP app. Note it. Screenshot it. The app is the source of truth.</li>
+    <li><strong>Review this morning's supply signals</strong> — who signaled, what they signaled, what grade they self-reported.</li>
+    <li><strong>Check the route</strong> — order your visits by zone to minimize backtracking. Bunches bruise with every kilometer.</li>
+    <li><strong>Charge your phone</strong> to ≥80%. You'll use it for photos, scale pairing, and the procurement form.</li>
+  </ul>
+
+  <h3 style="margin-top:18pt;">The morning of</h3>
+
+  <div class="callout gold">
+    <h4>The 8-tool field kit</h4>
+    <p style="margin-bottom:6pt;">Show up with these. Anything missing is a procurement that doesn't happen.</p>
+    <ol style="margin-bottom:0;">
+      <li><strong>Calibrated digital scale</strong> (50 kg min, 100 g precision) — battery fresh, paired to phone</li>
+      <li><strong>Sharp, clean knife</strong> — for cutting the bunch stem</li>
+      <li><strong>Latex cup / collection pan</strong> — to drain the sap before weighing (saves 2–4% mass)</li>
+      <li><strong>Tare weight</strong> — known hook + sling weight, written on the sling</li>
+      <li><strong>Sample bag</strong> — to carry rejected bunches' sample fingers for documentation</li>
+      <li><strong>Recording device</strong> — phone with POP app + offline form backup</li>
+      <li><strong>Permanent marker + tag ties</strong> — to mark accepted bunches by grade</li>
+      <li><strong>This guide, in your pocket</strong> — especially the tear-off card on the last page</li>
+    </ol>
+  </div>
+
+  <h3 style="margin-top:18pt;">Before you leave the depot</h3>
+
+  <table>
+    <thead>
+      <tr><th>Check</th><th>Why</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Scale zeros at 0.000 kg with no load</td><td>Prevents systematic 200 g over-read</td></tr>
+      <tr><td>Reference weight (e.g., 10 kg) reads within ±50 g</td><td>Calibration drift happens in transit</td></tr>
+      <tr><td>Phone has signal at the first two farms</td><td>If not, fall back to offline form</td></tr>
+      <tr><td>Cash float for spot payments (≤ KES 5,000)</td><td>M-Pesa is preferred; cash is the fallback</td></tr>
+      <tr><td>Vehicle fuel ≥ half tank</td><td>Stranded FO = stranded bunches</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- =========================================================
+     PAGE 6 — SECTION 3: Visit Workflow
+     ========================================================= -->
+<section class="page-break">
+  <div class="section-header">
+    <span class="eyebrow">Section Three</span>
+    <h2>The Visit Workflow</h2>
+  </div>
+
+  <p>A procurement visit has six steps. Most take under 90 minutes total. The order matters — re-ordering them is how disputes happen.</p>
+
+  <div class="steps">
+    <div class="step">
+      <h4>Arrive, greet, state the price.</h4>
+      <p>First 30 seconds — see Section 1. Name. Price. Permission to walk the field.</p>
+    </div>
+    <div class="step">
+      <h4>Walk the field and count bunches.</h4>
+      <p>Confirm what the outgrower signaled. Note any that look diseased, over-mature, or damaged. These are flagged for closer inspection later.</p>
+    </div>
+    <div class="step">
+      <h4>Sample-inspect at least 1 bunch in 5.</h4>
+      <p>Don't grade from outside the bunch. For every 5 bunches, cut one open and check finger condition. Disease hides inside.</p>
+    </div>
+    <div class="step">
+      <h4>Grade each accepted bunch, mark with tag.</h4>
+      <p>Use the threshold table in Section 6. Tie a colored tag: green = A, yellow = B, red = C, white = reject. The tag stays with the bunch to the depot.</p>
+    </div>
+    <div class="step">
+      <h4>Weigh, record, photograph.</h4>
+      <p>Net weight = gross − tare. Record in the app. Photograph the bunch on the scale, showing the weight reading.</p>
+    </div>
+    <div class="step">
+      <h4>Pay, sign, confirm, load.</h4>
+      <p>M-Pesa first, cash fallback. Outgrower signs (or thumbprints) the form. Confirm pickup time. Load carefully — no drops, no crush.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <h4>On latex drainage</h4>
+    <p style="margin-bottom:0;">A freshly cut bunch bleeds 2–4% of its mass as latex within the first 30 minutes. Always weigh <em>after</em> drainage, never before. If you weigh immediately, you will pay for water that won't be in the bunch at the depot — and shrinkage will trigger on a perfectly fine load.</p>
+  </div>
+</section>
+
+<!-- =========================================================
+     PAGE 7 — SECTION 4 DIVIDER: Varieties
+     ========================================================= -->
+<section class="divider">
+  <div class="divider-image" style="background-image:url('./illustrations/photos/banana_varieties.jpg');"></div>
+  <div class="divider-content">
+    <div class="divider-number">03</div>
+    <div class="divider-tag">Section Four</div>
+    <div class="divider-rule"></div>
+    <div class="divider-title">Varieties</div>
+  </div>
+</section>
+
+<!-- =========================================================
+     PAGE 8 — SECTION 4 CONTENT
+     ========================================================= -->
+<section class="page-break">
+  <div class="section-header">
+    <span class="eyebrow">Section Four</span>
+    <h2>Varieties — True Horn &amp; False Horn</h2>
+  </div>
+
+  <p>POP procures only two varieties of cooking plantain: <strong>False Horn</strong> and <strong>True Horn</strong>. Both are Musa AAB genome, both cook green, both are staples across East and West Africa. They are not interchangeable — the bunch shape, finger count, and market price differ. Mixing them silently is how grading errors and outgrower disputes both start.</p>
+
+  <div class="callout gold">
+    <h4>The single rule</h4>
+    <p style="margin-bottom:0;"><strong>Grade within a variety.</strong> Never compare a False Horn finger to a True Horn finger on the same ruler. Each variety has its own threshold table — see Section 6.</p>
+  </div>
+
+  <h3 style="margin-top:18pt;">Side-by-side</h3>
+
+  <div class="photo-row-2">
+    <figure>
+      <img src="./illustrations/photos/banana_varieties.jpg" alt="Banana varieties comparison">
+      <div class="caption">A mixed display of cooking banana varieties — False Horn on the left with its incomplete hand, True Horn on the right showing the full complement of hands.</div>
+    </figure>
+    <figure>
+      <img src="./illustrations/photos/african_plantains.jpg" alt="African plantain varieties">
+      <div class="caption">False Horn varieties commonly grown in East Africa — note the larger individual fingers and the incomplete (horn-like) final hand.</div>
+    </figure>
+  </div>
+
+  <h3 style="margin-top:18pt;">Identification cheat sheet</h3>
+
+  <table>
+    <thead>
+      <tr><th>Trait</th><th>False Horn (French)</th><th>True Horn</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Hands per bunch</strong></td><td>5–8 hands + a final incomplete "horn" of 1–4 fingers</td><td>5–8 hands + a true horn of 1–2 fingers (smaller than False Horn's)</td></tr>
+      <tr><td><strong>Finger size</strong></td><td>Larger, fatter (15–25 cm, girthier)</td><td>Smaller, longer (10–18 cm, slimmer)</td></tr>
+      <tr><td><strong>Bunch weight</strong></td><td>15–30 kg typical</td><td>8–15 kg typical</td></tr>
+      <tr><td><strong>Market premium</strong></td><td>Standard reference</td><td>+5–10% (preferred for frying, restaurant trade)</td></tr>
+      <tr><td><strong>Look for</strong></td><td>Big "fist" of fingers with one trailing horn</td><td>Smaller, more uniform, slimmer horn</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <h4>Common misidentification</h4>
+    <p style="margin-bottom:0;">A young False Horn, with the horn not yet emerged, can look like a True Horn. <strong>Always check the crown of the bunch</strong> — if there is a small bud visible where a final hand is forming, the variety is False Horn. If the bud is a single finger or absent, it is True Horn.</p>
+  </div>
+</section>
+
+<!-- =========================================================
+     PAGE 9 — SECTION 5: Maturity
+     ========================================================= -->
+<section class="page-break">
+  <div class="section-header">
+    <span class="eyebrow">Section Five</span>
+    <h2>Maturity — The 9-Stage Scale</h2>
+  </div>
+
+  <figure class="hero-strip">
+    <img src="./illustrations/photos/maturity_ripe_green.jpg" alt="Ripe and green plantain side by side">
+    <div class="caption">The two ends of the maturity scale — fully green (Stage 1) on the left, fully black-ripe (Stage 8) on the right. POP procures Stages 1–2 only.</div>
+  </figure>
+
+  <p>Maturity is graded on a 9-stage scale defined by peel color, finger firmness, and starch content. POP procures at <strong>Stages 1–2 (green mature)</strong> only. Stage 3+ is for ripening rooms and direct retail — not procurement.</p>
+
+  <table>
+    <thead>
+      <tr><th>Stage</th><th>Peel color</th><th>Finger feel</th><th>Procurement?</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>1</strong> — Green mature</td><td>Dark green, no yellow</td><td>Hard, no give</td><td>✅ <strong>Buy</strong></td></tr>
+      <tr><td><strong>2</strong> — Green turning</td><td>Green with first yellow tinge at ridges</td><td>Hard, slight give at stem end</td><td>✅ <strong>Buy (premium)</strong></td></tr>
+      <tr><td><strong>3</strong> — Yellowing</td><td>More yellow than green</td><td>Softening, easy to peel</td><td>⚠️ Reject (ripening, not procurement)</td></tr>
+      <tr><td><strong>4</strong> — Yellow with black spots</td><td>Yellow dominant, brown flecks</td><td>Soft, finger feels "ripe"</td><td>❌ Reject</td></tr>
+      <tr><td><strong>5+</strong> — Black ripe → overripe</td><td>Black or split peel</td><td>Yielding, smell sweet</td><td>❌ Reject (retail / cooking loss)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout urgent">
+    <h4>Why Stage 1–2 only</h4>
+    <p style="margin-bottom:0;">A plantain harvested at Stage 3 will ripen to black in 3–5 days at ambient. By the time it reaches the wholesale floor it is unsellable — and shrinkage flags a load that looked fine at intake. Stage 1–2 fruit gives us 7–10 days of usable life at room temperature.</p>
+  </div>
+
+  <div class="pullquote">"Maturity is graded by feel, not by calendar. A bunch in warm lowland ripens faster than the same variety at altitude. Trust the finger, not the date."</div>
+</section>
+
+<!-- =========================================================
+     PAGE 10 — SECTION 6 DIVIDER: Grading
+     ========================================================= -->
+<section class="divider">
+  <div class="divider-image" style="background-image:url('./illustrations/photos/african_plantains.jpg');"></div>
+  <div class="divider-content">
+    <div class="divider-number">04</div>
+    <div class="divider-tag">Section Six</div>
+    <div class="divider-rule"></div>
+    <div class="divider-title">Grading A · B · C · Reject</div>
+  </div>
+</section>
+
+<!-- =========================================================
+     PAGE 11 — SECTION 6 CONTENT
+     ========================================================= -->
+<section class="page-break">
+  <div class="section-header">
+    <span class="eyebrow">Section Six</span>
+    <h2>The Grading Standard</h2>
+  </div>
+
+  <figure class="hero-strip">
+    <img src="./illustrations/photos/banana_bunch_solo.jpg" alt="Single plantain bunch">
+    <div class="caption">A Grade A bunch — full, even, clean, fingers uniformly green mature. This is the benchmark the threshold table measures against.</div>
+  </figure>
+
+  <h3>Proposed thresholds (June 2026)</h3>
+
+  <table>
+    <thead>
+      <tr><th>Grade</th><th>False Horn bunch</th><th>True Horn bunch</th><th>Finger condition</th><th>Price vs. reference</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>A — Premium</strong></td><td>≥ 20 kg</td><td>≥ 12 kg</td><td>Finger ≥ 20 cm (FH) / ≥ 25 cm (TH); clean, no defects</td><td><strong>Reference (100%)</strong></td></tr>
+      <tr><td><strong>B — Standard</strong></td><td>12–20 kg</td><td>8–12 kg</td><td>Finger 15–20 cm (FH) / 20–25 cm (TH); minor cosmetic only</td><td><strong>−5%</strong></td></tr>
+      <tr><td><strong>C — Lower / process</strong></td><td>&lt; 12 kg</td><td>&lt; 8 kg</td><td>Finger &lt; 15 cm (FH) / &lt; 20 cm (TH); visible defects OK, no disease</td><td><strong>−10% to −15%</strong></td></tr>
+      <tr><td><strong>Reject</strong></td><td>Any weight</td><td>Any weight</td><td>Disease (BSV, sigatoka, weevil), stage 3+, severe damage, rot</td><td><strong>No payment</strong></td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout gold">
+    <h4>True Horn premium</h4>
+    <p style="margin-bottom:0;">Because True Horn commands a 5–10% premium in the restaurant and frying trade, add this on top of the grade band. Example: True Horn Grade A at +5% premium, KES 32 base → KES 33.60/kg.</p>
+  </div>
+
+  <h3 style="margin-top:18pt;">How to assign a grade</h3>
+
+  <p>For each bunch, ask four questions in order. The first "no" stops the grade from going higher.</p>
+
+  <div class="steps">
+    <div class="step">
+      <h4>Reject test — is there a reject condition?</h4>
+      <p>Disease? Pest? Stage 3+? Rot? Severe mechanical damage? If yes → <strong>Reject</strong>. Stop here.</p>
+    </div>
+    <div class="step">
+      <h4>Weight test — does it meet Grade A or B weight?</h4>
+      <p>Use the variety-specific threshold. If the bunch is below B weight, it is Grade C.</p>
+    </div>
+    <div class="step">
+      <h4>Finger test — does it meet the finger length for the grade?</h4>
+      <p>Sample 3 fingers from the top, middle, and bottom hand. Measure along the outer curve. If any finger falls short, downgrade one grade.</p>
+    </div>
+    <div class="step">
+      <h4>Cleanliness test — what defects are visible?</h4>
+      <p>Use the defect catalog in Section 7. Count and assess. Cosmetic alone stays A. Functional defects (latex, scarring affecting the peel) drop to B. Multiple defects → C.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <h4>Volume bonus</h4>
+    <p style="margin-bottom:0;">A single load meeting or exceeding <strong>200 kg of Grade A equivalent</strong> (where A=1.0, B=0.95, C=0.85, reject=0) triggers a <strong>+5% bonus</strong> on the load total. Apply it on the form, not the per-bunch calculation.</p>
+  </div>
+</section>
+
+<!-- =========================================================
+     PAGE 12 — SECTION 7 DIVIDER: Defect Catalog
+     ========================================================= -->
+<section class="divider">
+  <div class="divider-image" style="background-image:url('./illustrations/photos/banana_disease.jpg');"></div>
+  <div class="divider-content">
+    <div class="divider-number">05</div>
+    <div class="divider-tag">Section Seven</div>
+    <div class="divider-rule"></div>
+    <div class="divider-title">Defect Catalog</div>
+  </div>
+</section>
+
+<!-- =========================================================
+     PAGE 13 — SECTION 7 CONTENT
+     ========================================================= -->
+<section class="page-break">
+  <div class="section-header">
+    <span class="eyebrow">Section Seven</span>
+    <h2>Defect Catalog &amp; Responses</h2>
+  </div>
+
+  <figure class="hero-strip">
+    <img src="./illustrations/photos/banana_disease.jpg" alt="Banana leaf disease">
+    <div class="caption">Banana diseases travel from leaf to fruit. A field showing leaf symptoms will produce diseased bunches — sample-inspect at the source, not at the depot.</div>
+  </figure>
+
+  <h3>The 8 defects to grade on</h3>
+
+  <div class="grid-2" style="margin-top:14pt;">
+    <div class="callout urgent">
+      <h4>1. Black Sigatoka</h4>
+      <p style="margin-bottom:4pt;"><strong>Symptoms:</strong> Black streaking on peel, premature ripening in patches, leaf streaks visible in field.</p>
+      <p style="margin-bottom:0;"><strong>Action:</strong> Reject the bunch. Photograph the leaf and the finger. Reject all fruit from that mat for the visit.</p>
+    </div>
+    <div class="callout urgent">
+      <h4>2. Banana Weevil damage</h4>
+      <p style="margin-bottom:4pt;"><strong>Symptoms:</strong> Tunnels in the corm, weakened stem, finger separation at the crown.</p>
+      <p style="margin-bottom:0;"><strong>Action:</strong> Reject. Mark the mat for the supervisor's follow-up — weevil spreads.</p>
+    </div>
+    <div class="callout">
+      <h4>3. Latex staining</h4>
+      <p style="margin-bottom:4pt;"><strong>Symptoms:</strong> Black-brown stains on fingers from sap oxidizing on the peel.</p>
+      <p style="margin-bottom:0;"><strong>Action:</strong> Cosmetic only if surface. Reject if staining covers &gt;30% of any finger or penetrates the peel.</p>
+    </div>
+    <div class="callout">
+      <h4>4. Mechanical damage</h4>
+      <p style="margin-bottom:4pt;"><strong>Symptoms:</strong> Bruising, cuts, finger separation, broken crown.</p>
+      <p style="margin-bottom:0;"><strong>Action:</strong> B if minor. C if multiple fingers affected. Reject if the crown is broken — it won't store.</p>
+    </div>
+    <div class="callout">
+      <h4>5. Thrips scarring</h4>
+      <p style="margin-bottom:4pt;"><strong>Symptoms:</strong> Raised silvery-brown corky patches on the peel between fingers.</p>
+      <p style="margin-bottom:0;"><strong>Action:</strong> B if isolated. C if pervasive. Not a reject — purely cosmetic.</p>
+    </div>
+    <div class="callout">
+      <h4>6. Sunburn / scald</h4>
+      <p style="margin-bottom:4pt;"><strong>Symptoms:</strong> Yellow or pale patch on the sunward side of the bunch.</p>
+      <p style="margin-bottom:0;"><strong>Action:</strong> B. Cosmetic only. Does not affect storage or cooking quality.</p>
+    </div>
+    <div class="callout urgent">
+      <h4>7. Crown rot / Anthracnose</h4>
+      <p style="margin-bottom:4pt;"><strong>Symptoms:</strong> Black soft rot at the crown, fingers detaching, dark lesions.</p>
+      <p style="margin-bottom:0;"><strong>Action:</strong> Reject. This is the most common cause of whole-load loss at the depot.</p>
+    </div>
+    <div class="callout urgent">
+      <h4>8. Bunchy top / viral</h4>
+      <p style="margin-bottom:4pt;"><strong>Symptoms:</strong> Stunted, narrow leaves in field; small, misshapen fingers.</p>
+      <p style="margin-bottom:0;"><strong>Action:</strong> Reject. Report the mat to the supervisor — viral diseases are notifiable.</p>
+    </div>
+  </div>
+
+  <div class="pullquote">"A defect is not a judgment on the outgrower. It is a description of the bunch. Use neutral language: 'the peel shows latex staining,' not 'your bunch is stained.'"</div>
+</section>
+
+<!-- =========================================================
+     PAGE 14 — SECTION 8: Pricing & Negotiation
+     ========================================================= -->
+<section class="page-break">
+  <div class="section-header">
+    <span class="eyebrow">Section Eight</span>
+    <h2>Pricing &amp; Negotiation</h2>
+  </div>
+
+  <p>Pricing is set in the app, refreshed daily. Your role is to apply it. The only lever a Field Officer controls is the grade.</p>
+
+  <h3>The ±5% band</h3>
+
+  <div class="callout gold">
+    <h4>How the band works</h4>
+    <p style="margin-bottom:0;">Today's reference price for False Horn Grade A is, say, <strong>KES 32/kg</strong>. You may pay anywhere from <strong>KES 30.40 to KES 33.60</strong> — that is the field band. Above the band requires supervisor approval. Below the band is treated as a special concession and flagged in the form.</p>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Scenario</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Outgrower offers load well above Grade A, all clean</td><td>Pay the band top (+5%), note as "premium load" on form</td></tr>
+      <tr><td>Outgrower offers load mixed A/B/C</td><td>Weigh and grade each bunch, no negotiation on the per-kg rate</td></tr>
+      <tr><td>Outgrower demands above-band rate</td><td>Refer to supervisor in-app. Do not exceed band in the field.</td></tr>
+      <tr><td>Outgrower offers below-band rate to clear stock</td><td>Acceptable up to 5% below. Document the reason (e.g., "clearing pre-mature stock").</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top:18pt;">Worked example</h3>
+
+  <p><strong>Outgrower:</strong> Mama Wanjiku, Kapsabet zone. <strong>Signal:</strong> 4 bunches, ~80 kg.</p>
+  <p><strong>Reference (today):</strong> False Horn Grade A = KES 32/kg. True Horn premium +5%.</p>
+
+  <table>
+    <thead>
+      <tr><th>Bunch</th><th>Variety</th><th>Weight</th><th>Grade</th><th>Rate</th><th>Value</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>False Horn</td><td>22 kg</td><td>A</td><td>KES 32.00</td><td>KES 704.00</td></tr>
+      <tr><td>2</td><td>False Horn</td><td>18 kg</td><td>B</td><td>KES 30.40 (−5%)</td><td>KES 547.20</td></tr>
+      <tr><td>3</td><td>True Horn</td><td>11 kg</td><td>A</td><td>KES 33.60 (+5%)</td><td>KES 369.60</td></tr>
+      <tr><td>4</td><td>False Horn</td><td>9 kg</td><td>C</td><td>KES 28.80 (−10%)</td><td>KES 259.20</td></tr>
+      <tr><td><strong>Total</strong></td><td></td><td><strong>60 kg</strong></td><td></td><td></td><td><strong>KES 1,880.00</strong></td></tr>
+    </tbody>
+  </table>
+
+  <p>60 kg <strong>does not</strong> meet the 200 kg Grade A-equivalent threshold for the volume bonus. The 5% bonus does not apply. If the load had been 200 kg at 95% Grade A equivalent, the bonus would be 5% × KES 6,400 = <strong>KES 320</strong> extra.</p>
+</section>
+
+<!-- =========================================================
+     PAGE 15 — SECTION 9: Weighing, Shrinkage & Records
+     ========================================================= -->
+<section class="page-break">
+  <div class="section-header">
+    <span class="eyebrow">Section Nine</span>
+    <h2>Weighing, Shrinkage &amp; Records</h2>
+  </div>
+
+  <h3>Net weight = gross − tare</h3>
+  <p>Always subtract. The sling + hook + any packaging you used to suspend the bunch. Write the tare on the sling in marker so it stays with the scale.</p>
+
+  <h3>Shrinkage — the ±5% flag</h3>
+
+  <div class="callout">
+    <h4>What shrinkage measures</h4>
+    <p style="margin-bottom:0;">Shrinkage is the difference between the weight you recorded at the farm and the weight at the depot, expressed as a percentage. Normal range: 0–3% (latex loss, handling). Above 5% triggers an investigation.</p>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Shrinkage</th><th>Likely cause</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>0–2%</td><td>Normal latex drainage</td><td>None — record the actual weight</td></tr>
+      <tr><td>2–5%</td><td>Some weight loss in transit</td><td>Note the cause on the form (heat, time, handling)</td></tr>
+      <tr><td>5–8%</td><td>Excessive drainage or partial ripeness</td><td>Flag for supervisor review. Was the grade correct?</td></tr>
+      <tr><td>&gt; 8%</td><td>Likely Stage 3+ at intake, or rough handling</td><td>Investigate. May require a field re-training for the FO.</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top:18pt;">The procurement form — what to capture</h3>
+
+  <ul class="checklist">
+    <li><strong>Outgrower ID</strong> — from the POP registry, not from memory</li>
+    <li><strong>Date and time of weighing</strong> — auto-stamped by the app</li>
+    <li><strong>GPS pin</strong> — auto-stamped by the app; flags visits outside registered farms</li>
+    <li><strong>Bunch count</strong> and per-bunch <strong>variety, weight, grade</strong></li>
+    <li><strong>Reference price</strong> and per-bunch <strong>rate applied</strong></li>
+    <li><strong>Total payable</strong> and <strong>payment method</strong> (M-Pesa / cash)</li>
+    <li><strong>Outgrower signature or thumbprint</strong></li>
+    <li><strong>Photo evidence</strong> — one per rejected bunch + one bulk shot of the load</li>
+    <li><strong>Notes</strong> — outgrower comments, weather, any deviation from the band</li>
+  </ul>
+</section>
+
+<!-- =========================================================
+     PAGE 16 — SECTION 10: Rejections & Disputes
+     ========================================================= -->
+<section class="page-break">
+  <div class="section-header">
+    <span class="eyebrow">Section Ten</span>
+    <h2>Rejections, Disputes &amp; Escalation</h2>
+  </div>
+
+  <p>Rejections will happen. The way they are handled determines whether the outgrower comes back.</p>
+
+  <h3>How to reject a bunch</h3>
+
+  <div class="callout urgent">
+    <h4>The 4-step rejection script</h4>
+    <ol style="margin-bottom:0;">
+      <li><strong>State the defect factually.</strong> "This bunch shows crown rot at the base — the fingers are starting to separate."</li>
+      <li><strong>Show, don't just tell.</strong> Point to the specific defect. Offer to cut a finger open to demonstrate.</li>
+      <li><strong>Reference the standard.</strong> "Per POP grading, crown rot at this stage is a reject — it would lose 30% of the load in transit."</li>
+      <li><strong>Offer the path forward.</strong> "The other three bunches are good A and B. We can proceed with those, and I can mark this mat for the supervisor to advise on next season."</li>
+    </ol>
+  </div>
+
+  <h3>Escalation ladder</h3>
+
+  <table>
+    <thead>
+      <tr><th>Level</th><th>Trigger</th><th>Who to call</th><th>When</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Outgrower disputes a single grade</td><td>Field Officer, in the field</td><td>On the spot, with photo evidence</td></tr>
+      <tr><td>2</td><td>Outgrower refuses all load</td><td>Field Supervisor (call)</td><td>Within 1 hour of leaving farm</td></tr>
+      <tr><td>3</td><td>Outgrower alleges FO misconduct</td><td>Field Supervisor + HR note</td><td>Same day, written report</td></tr>
+      <tr><td>4</td><td>Suspected disease / pest in field</td><td>Field Supervisor + Agronomist</td><td>Same day, photo + GPS pin</td></tr>
+      <tr><td>5</td><td>Safety threat / refusal to leave</td><td>Withdraw, call operations</td><td>Immediately</td></tr>
+    </tbody>
+  </table>
+
+  <div class="pullquote">"A rejected bunch is a data point. A rejected outgrower is a system failure. When in doubt, escalate. Never burn a relationship to win a single procurement."</div>
+
+  <div class="endnote">All escalations logged in the app with photos and notes. The supervisor reviews within 24 hours and either confirms the FO's call, adjusts the grade, or arranges a follow-up visit. Outgrowers always receive a written response within 48 hours — verbal-only resolutions are not acceptable.</div>
+</section>
+
+<!-- =========================================================
+     PAGE 17 — QUICK-REFERENCE TEAR-OFF CARD
+     ========================================================= -->
+<section class="quickcard-page">
+  <div class="quickcard">
+    <div class="quickcard-head">
+      <span class="eyebrow">Tear-off Quick Card</span>
+      <h2>Plantain Grading at a Glance</h2>
+      <div style="font-family:'Playfair Display',serif; font-style:italic; font-size:9pt; color:var(--warm-gray); margin-top:4pt;">Cut along the dashed line. Keep in pocket during visits.</div>
+    </div>
+
+    <div class="quickcard-body">
+      <div class="quickcard-col">
+        <h4>Grade Thresholds</h4>
+        <table style="font-size:8pt; margin:0;">
+          <thead><tr><th>Grade</th><th>FH kg</th><th>TH kg</th></tr></thead>
+          <tbody>
+            <tr><td><strong>A</strong></td><td>≥ 20</td><td>≥ 12</td></tr>
+            <tr><td><strong>B</strong></td><td>12–20</td><td>8–12</td></tr>
+            <tr><td><strong>C</strong></td><td>&lt; 12</td><td>&lt; 8</td></tr>
+            <tr><td><strong>Reject</strong></td><td>any</td><td>any</td></tr>
+          </tbody>
+        </table>
+
+        <h4 style="margin-top:10pt;">Price Adjustments</h4>
+        <ul>
+          <li>Grade A: reference (100%)</li>
+          <li>Grade B: −5%</li>
+          <li>Grade C: −10% to −15%</li>
+          <li>True Horn: +5% to +10%</li>
+          <li>Volume bonus (≥ 200 kg A-eq): +5%</li>
+          <li>Field band: ±5% of reference</li>
+        </ul>
+
+        <h4 style="margin-top:10pt;">Maturity — Buy Stages</h4>
+        <ul>
+          <li>✅ Stage 1 (green mature)</li>
+          <li>✅ Stage 2 (green turning)</li>
+          <li>❌ Stage 3+ (yellowing onward)</li>
+        </ul>
+      </div>
+
+      <div class="quickcard-col">
+        <h4>Rejection Triggers</h4>
+        <ul>
+          <li>Black sigatoka on fruit or leaf</li>
+          <li>Banana weevil (corm tunnels)</li>
+          <li>Crown rot / Anthracnose</li>
+          <li>Bunchy top / viral</li>
+          <li>Stage 3+ maturity</li>
+          <li>Severe mechanical damage</li>
+        </ul>
+
+        <h4 style="margin-top:10pt;">Field Procedure</h4>
+        <ol>
+          <li>Greet + state today's price</li>
+          <li>Walk the field, count bunches</li>
+          <li>Sample-inspect 1 in 5</li>
+          <li>Grade, tag (A=green, B=yellow, C=red)</li>
+          <li>Drain latex, weigh, photograph</li>
+          <li>Record, pay, sign, load</li>
+        </ol>
+
+        <h4 style="margin-top:10pt;">Shrinkage</h4>
+        <ul>
+          <li>0–2% — normal</li>
+          <li>2–5% — note cause</li>
+          <li>&gt; 5% — flag for review</li>
+        </ul>
+
+        <h4 style="margin-top:10pt;">Escalation</h4>
+        <ul>
+          <li>Grade dispute → resolve in-field with photo</li>
+          <li>Load refused → call Field Supervisor within 1 hr</li>
+          <li>Disease suspected → Agronomist same day</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quickcard-foot">
+      Bitverse · Plantain Outgrowers Portal · Field Officer v1.0 · June 2026
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
