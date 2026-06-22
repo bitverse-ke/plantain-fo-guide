@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Plantain FO Quick Guide — 1 Page Poster</title>
+<style>
+/* ============================================================
+   POP FIELD OFFICER 1-PAGE QUICK GUIDE — A3 PORTRAIT POSTER
+   297mm × 420mm. WeasyPrint print stylesheet.
+   ============================================================ */
+
+@page {
+    size: A3 portrait;
+    margin: 6mm 6mm 6mm 6mm;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    color: #1f2937;
+    font-size: 8.5pt;
+    line-height: 1.2;
+    background: #fff;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* ---- COLOR TOKENS (matches reference) ----
+   --green-dark:  #2E7D32   (header, primary)
+   --green-deep:  #1B5E20   (header shadow)
+   --green-bg:    #E8F5E9   (acceptable section)
+   --green-mid:   #A5D6A7   (grade-A header)
+   --yellow:      #FBC02D   (grade-C header)
+   --red:         #C62828   (unacceptable, reject)
+   --cream:       #FFF8E1   (grade-C bg)
+   --grey:        #F5F5F5   (grade-B bg, divider)
+*/
+
+:root {
+    --green-dark:  #2E7D32;
+    --green-deep:  #1B5E20;
+    --green-bg:    #E8F5E9;
+    --green-mid:   #A5D6A7;
+    --yellow:      #FBC02D;
+    --red:         #C62828;
+    --cream:       #FFF8E1;
+    --grey:        #F5F5F5;
+    --dark:        #1f2937;
+}
+
+/* ===================  HEADER  =================== */
+.header {
+    background: linear-gradient(180deg, var(--green-dark), var(--green-deep));
+    color: #fff;
+    padding: 5mm 8mm 4mm 8mm;
+    border-radius: 3mm;
+    display: flex;
+    align-items: center;
+    gap: 5mm;
+    margin-bottom: 2mm;
+    position: relative;
+    overflow: hidden;
+}
+.header::before {
+    content: "";
+    position: absolute;
+    right: -10mm;
+    top: -10mm;
+    width: 60mm;
+    height: 60mm;
+    background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%);
+    border-radius: 50%;
+}
+.header-text {
+    flex: 1;
+    z-index: 1;
+}
+.header-eyebrow {
+    font-size: 9pt;
+    font-weight: 600;
+    letter-spacing: 1.5pt;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-bottom: 0.5mm;
+}
+.header h1 {
+    font-size: 22pt;
+    font-weight: 800;
+    line-height: 1.0;
+    margin-bottom: 1.5mm;
+}
+.header h1 .accent { color: #C8E6C9; }
+.header-tagline {
+    font-size: 9pt;
+    font-weight: 500;
+    opacity: 0.95;
+    letter-spacing: 0.3pt;
+}
+.header-photo {
+    width: 38mm;
+    height: 38mm;
+    border-radius: 3mm;
+    object-fit: cover;
+    z-index: 1;
+    box-shadow: 0 1.5mm 3mm rgba(0,0,0,0.25);
+}
+
+/* ===================  SECTION SHELL  =================== */
+.section {
+    border: 0.5pt solid #e0e0e0;
+    border-radius: 2mm;
+    padding: 2.5mm 4mm;
+    margin-bottom: 2mm;
+    page-break-inside: avoid;
+}
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 2.5mm;
+    margin-bottom: 2mm;
+}
+.section-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 6.5mm;
+    height: 6.5mm;
+    border-radius: 50%;
+    background: var(--green-dark);
+    color: #fff;
+    font-weight: 800;
+    font-size: 9pt;
+}
+.section-num.red { background: var(--red); }
+.section-num.dark { background: var(--green-deep); }
+.section-title h2 {
+    font-size: 11pt;
+    font-weight: 800;
+    color: var(--green-deep);
+    letter-spacing: 0.5pt;
+    text-transform: uppercase;
+}
+.section-title.red h2 { color: var(--red); }
+
+/* ===================  §1 ACCEPTABLE  =================== */
+.s-acceptable { background: var(--green-bg); border-color: var(--green-mid); }
+.s-acceptable .layout {
+    display: grid;
+    grid-template-columns: 58% 42%;
+    gap: 4mm;
+    align-items: center;
+}
+.s-acceptable .intro {
+    font-size: 8.5pt;
+    margin-bottom: 1.5mm;
+    font-weight: 500;
+}
+.checklist {
+    list-style: none;
+}
+.checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 2mm;
+    padding: 0.6mm 0;
+    font-size: 8.5pt;
+    line-height: 1.25;
+}
+.checklist li::before {
+    content: "✓";
+    color: var(--green-dark);
+    font-weight: 800;
+    font-size: 10pt;
+    flex-shrink: 0;
+    width: 3.5mm;
+    text-align: center;
+}
+.acceptable-photo {
+    width: 100%;
+    height: 42mm;
+    object-fit: cover;
+    border-radius: 2mm;
+    box-shadow: 0 1mm 2mm rgba(0,0,0,0.15);
+}
+
+/* ===================  §2 UNACCEPTABLE  =================== */
+.s-unacceptable { background: #FFEBEE; border-color: #EF9A9A; }
+.unacceptable-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2mm;
+    margin-top: 1mm;
+}
+.defect-card {
+    background: #fff;
+    border-radius: 1.5mm;
+    overflow: hidden;
+    box-shadow: 0 0.5mm 1mm rgba(0,0,0,0.1);
+}
+.defect-card img {
+    width: 100%;
+    height: 20mm;
+    object-fit: cover;
+}
+.defect-caption {
+    padding: 1mm 1.5mm;
+    font-size: 8pt;
+    font-weight: 700;
+    color: var(--red);
+    text-align: center;
+    border-top: 0.5pt solid #FFCDD2;
+}
+.defect-caption small {
+    display: block;
+    font-weight: 500;
+    color: #555;
+    font-size: 7pt;
+    margin-top: 0.3mm;
+}
+
+/* ===================  §3 GRADING  =================== */
+.s-grading { background: #fff; border-color: #cfcfcf; }
+.grading-note {
+    font-size: 8pt;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 1.5mm;
+}
+.grading-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 8pt;
+    table-layout: fixed;
+}
+.grading-table th, .grading-table td {
+    border: 0.5pt solid #bdbdbd;
+    padding: 1.2mm 1.5mm;
+    text-align: center;
+    vertical-align: middle;
+}
+.grading-table th.row-label,
+.grading-table td.row-label {
+    background: #f5f5f5;
+    font-weight: 700;
+    text-align: left;
+    width: 16%;
+}
+.grading-table thead th {
+    font-weight: 800;
+    font-size: 8.5pt;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.3pt;
+}
+.grading-table thead th.a { background: var(--green-dark); }
+.grading-table thead th.b { background: #66BB6A; }
+.grading-table thead th.c { background: var(--yellow); color: #5D4037; }
+.grading-table thead th.x { background: var(--red); }
+
+.grading-table .grade-photo {
+    width: 100%;
+    height: 14mm;
+    object-fit: cover;
+    border-radius: 1.5mm;
+    margin-bottom: 0.5mm;
+}
+.grading-table .grade-name {
+    font-weight: 700;
+    margin-bottom: 0.3mm;
+}
+.grading-table .grade-tag {
+    font-size: 7pt;
+    font-weight: 600;
+    opacity: 0.85;
+}
+
+/* Variety strip below table */
+.variety-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2mm;
+    margin-top: 2mm;
+    background: #fafafa;
+    padding: 2mm;
+    border-radius: 2mm;
+}
+.variety-card {
+    text-align: center;
+}
+.variety-card img {
+    width: 100%;
+    height: 14mm;
+    object-fit: cover;
+    border-radius: 1.5mm;
+    margin-bottom: 1mm;
+}
+.variety-card .vname {
+    font-weight: 800;
+    color: var(--green-deep);
+    font-size: 8.5pt;
+}
+.variety-card .vpremium {
+    font-size: 7.5pt;
+    color: var(--red);
+    font-weight: 700;
+}
+.variety-card .vnote {
+    font-size: 7pt;
+    color: #555;
+    line-height: 1.15;
+    margin-top: 0.3mm;
+}
+
+/* ===================  §4-7  FOUR-COLUMN FOOTER  =================== */
+.four-col {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2mm;
+    margin-bottom: 2mm;
+}
+.col-card {
+    background: #fff;
+    border: 0.5pt solid #cfcfcf;
+    border-top: 2.5pt solid var(--green-dark);
+    border-radius: 2mm;
+    padding: 2mm 2.5mm;
+}
+.col-card h3 {
+    font-size: 9pt;
+    font-weight: 800;
+    color: var(--green-deep);
+    text-transform: uppercase;
+    margin-bottom: 1.5mm;
+    letter-spacing: 0.3pt;
+}
+.col-card ol {
+    list-style: none;
+    counter-reset: step;
+}
+.col-card ol li {
+    counter-increment: step;
+    position: relative;
+    padding: 0.6mm 0 0.6mm 5.5mm;
+    font-size: 8pt;
+    line-height: 1.25;
+}
+.col-card ol li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0.5mm;
+    width: 4mm;
+    height: 4mm;
+    background: var(--green-dark);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 7pt;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col-card ul.bullets {
+    list-style: none;
+}
+.col-card ul.bullets li {
+    position: relative;
+    padding: 0.5mm 0 0.5mm 4.5mm;
+    font-size: 8pt;
+    line-height: 1.25;
+}
+.col-card ul.bullets li::before {
+    content: "▸";
+    position: absolute;
+    left: 1.5mm;
+    color: var(--green-dark);
+    font-weight: 800;
+}
+
+.icon-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5mm;
+    margin-bottom: 1mm;
+}
+.icon-row .ico {
+    width: 4mm;
+    height: 4mm;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--green-bg);
+    border-radius: 50%;
+    font-size: 8pt;
+    color: var(--green-deep);
+}
+.icon-row .txt {
+    font-size: 8pt;
+    line-height: 1.25;
+}
+
+/* ===================  FOOTER  =================== */
+.footer {
+    background: var(--green-bg);
+    border: 0.5pt solid var(--green-mid);
+    border-radius: 2mm;
+    padding: 2.5mm 5mm;
+    display: flex;
+    align-items: center;
+    gap: 4mm;
+    margin-top: 1mm;
+}
+.footer-icon {
+    font-size: 16pt;
+    flex-shrink: 0;
+}
+.footer-text {
+    flex: 1;
+}
+.footer-tagline {
+    font-size: 10pt;
+    font-weight: 800;
+    color: var(--green-deep);
+    letter-spacing: 0.3pt;
+}
+.footer-sub {
+    font-size: 8pt;
+    color: #555;
+    margin-top: 0.3mm;
+}
+.footer-meta {
+    text-align: right;
+    font-size: 7pt;
+    color: #666;
+    border-left: 0.5pt solid var(--green-mid);
+    padding-left: 3mm;
+}
+
+/* ===================  WARNING CALLOUT  =================== */
+.warn {
+    background: #FFF3E0;
+    border-left: 2.5pt solid #EF6C00;
+    padding: 1.5mm 2.5mm;
+    font-size: 8pt;
+    border-radius: 1mm;
+    margin-top: 1.5mm;
+    color: #5D4037;
+}
+.warn::before {
+    content: "⚠ ";
+    font-weight: 800;
+}
+</style>
+</head>
+<body>
+
+<!-- ===================  HEADER  =================== -->
+<div class="header">
+    <div class="header-text">
+            <div class="header-eyebrow">POP · Field Officer Quick Guide</div>
+            <h1>Buying & Grading Plantain<br>From Outgrowers</h1>
+            <div class="header-tagline">Buy good quality · Pay fairly · Record accurately · Handle carefully</div>
+        </div>
+        <img class="header-photo" src="illustrations/photos/visit_farmer.jpg" alt="Field officer collecting plantain">
+</div>
+
+<!-- ===================  §1 ACCEPTABLE  =================== -->
+<div class="section s-acceptable">
+    <div class="section-title">
+        <span class="section-num">1</span>
+        <h2>Acceptable Plantain</h2>
+    </div>
+    <div class="layout">
+        <div>
+            <div class="intro">Only buy plantain that meets <strong>every</strong> quality check below.</div>
+            <ul class="checklist">
+                        <li>Mature but not overripe — firm, angular fingers</li>
+                        <li>Freshly harvested — same day or within 24 hours</li>
+                        <li>Clean and free from dirt or latex staining</li>
+                        <li>Free from pests and disease damage (no sigatoka, weevil, crown rot)</li>
+                        <li>Fingers well formed and of normal shape for the variety</li>
+                        <li>Bunch well filled — no missing hands, all fingers present</li>
+                        <li>Cut stalk clean — not torn, crushed, or split</li>
+                    </ul>
+                </div>
+                <img class="acceptable-photo" src="illustrations/photos/maturity_green.jpg" alt="Fresh green plantain bunches">
+    </div>
+</div>
+
+<!-- ===================  §2 UNACCEPTABLE  =================== -->
+<div class="section s-unacceptable">
+    <div class="section-title red">
+        <span class="section-num red">2</span>
+        <h2 style="color: var(--red);">Unacceptable — Do NOT Buy</h2>
+    </div>
+    <div class="unacceptable-grid">
+        <div class="defect-card">
+                    <img src="illustrations/photos/maturity_overripe.jpg" alt="Overripe plantain">
+                    <div class="defect-caption">Overripe<small>yellow or black skin</small></div>
+                </div>
+                <div class="defect-card">
+                    <img src="illustrations/photos/defect_sigatoka.jpg" alt="Sigatoka leaf spot">
+                    <div class="defect-caption">Sigatoka / leaf spot<small>dark leaf lesions</small></div>
+                </div>
+                <div class="defect-card">
+                    <img src="illustrations/photos/defect_weevil.jpg" alt="Weevil damage">
+                    <div class="defect-caption">Weevil damage<small>tunnels in corm/crown</small></div>
+                </div>
+                <div class="defect-card">
+                    <img src="illustrations/photos/defect_pest_damage.jpg" alt="Flower pest damage">
+                    <div class="defect-caption">Flower thrips / scarring<small>scabs, surface marks</small></div>
+                </div>
+                <div class="defect-card">
+                    <img src="illustrations/photos/defect_crown_rot.jpg" alt="Crown rot / overripe">
+                    <div class="defect-caption">Crown rot / soft stalk<small>mouldy or split base</small></div>
+                </div>
+                <div class="defect-card">
+                    <img src="illustrations/photos/defect_bunchy_top.jpg" alt="Bunchy top">
+                    <div class="defect-caption">Bunchy top / malformed<small>deformed fingers, gaps</small></div>
+                </div>
+    </div>
+    <div class="warn">Reject professionally: <strong>reject the bunch, not the outgrower</strong>. Document on the form, explain why, and offer the next-lower grade if it qualifies.</div>
+</div>
+
+<!-- ===================  §3 GRADING  =================== -->
+<div class="section s-grading">
+    <div class="section-title">
+        <span class="section-num dark">3</span>
+        <h2>Grading Standards — by Variety</h2>
+    </div>
+    <div class="grading-note">Grade is set by <strong>bunch weight + finger length + fill + defects</strong>. All three varieties (FH / TH / RH) follow the same A/B/C/Reject logic, but with different kg thresholds. Use the <strong>variety-specific numbers below</strong>.</div>
+
+    <table class="grading-table">
+        <thead>
+            <tr>
+                <th class="row-label" style="background:#fff; border-bottom:0.5pt solid #fff;"></th>
+                <th class="a">Grade A · Premium</th>
+                <th class="b">Grade B · Standard</th>
+                <th class="c">Grade C · Lower Acceptable</th>
+                <th class="x">Reject</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="row-label">Appearance</td>
+                <td><img class="grade-photo" src="illustrations/photos/maturity_green.jpg" alt="Grade A"><div class="grade-tag">Well-filled, uniform</div></td>
+                <td><img class="grade-photo" src="illustrations/photos/variety_th.jpg" alt="Grade B"><div class="grade-tag">Slightly uneven</div></td>
+                <td><img class="grade-photo" src="illustrations/photos/maturity_ripe.jpg" alt="Grade C"><div class="grade-tag">Irregular, small</div></td>
+                <td><img class="grade-photo" src="illustrations/photos/maturity_overripe.jpg" alt="Reject"><div class="grade-tag">Severe damage</div></td>
+            </tr>
+            <tr>
+                <td class="row-label">False Horn<br><span style="font-weight:500; font-size:7.5pt; color:#666;">(Musa AAB)</span></td>
+                <td><strong>≥ 20 kg</strong><br><span style="font-size:7.5pt; color:#666;">finger ≥ 20 cm</span></td>
+                <td>12–20 kg<br><span style="font-size:7.5pt; color:#666;">finger 15–20 cm</span></td>
+                <td>&lt; 12 kg<br><span style="font-size:7.5pt; color:#666;">finger &lt; 15 cm</span></td>
+                <td>Disease · pest · stage 3+ · severe damage</td>
+            </tr>
+            <tr>
+                <td class="row-label">True Horn<br><span style="font-weight:500; font-size:7.5pt; color:#666;">(Musa AAB)</span></td>
+                <td><strong>≥ 12 kg</strong><br><span style="font-size:7.5pt; color:#666;">finger ≥ 25 cm</span></td>
+                <td>8–12 kg<br><span style="font-size:7.5pt; color:#666;">finger 20–25 cm</span></td>
+                <td>&lt; 8 kg<br><span style="font-size:7.5pt; color:#666;">finger &lt; 20 cm</span></td>
+                <td>Disease · pest · stage 3+ · severe damage</td>
+            </tr>
+            <tr>
+                <td class="row-label">Rhino Horn<br><span style="font-weight:500; font-size:7.5pt; color:#666;">(Musa AAB)</span></td>
+                <td><strong>≥ 25 kg</strong><br><span style="font-size:7.5pt; color:#666;">finger ≥ 30 cm</span></td>
+                <td>15–25 kg<br><span style="font-size:7.5pt; color:#666;">finger 25–30 cm</span></td>
+                <td>&lt; 15 kg<br><span style="font-size:7.5pt; color:#666;">finger &lt; 25 cm</span></td>
+                <td>Disease · pest · stage 3+ · severe damage</td>
+            </tr>
+            <tr>
+                <td class="row-label">Acceptable<br>defects</td>
+                <td>None or very minor<br>superficial marks</td>
+                <td>Minor superficial<br>marks / scratches</td>
+                <td>Minor to moderate<br>blemishes</td>
+                <td><strong>Severe defects —<br>not acceptable</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="variety-strip">
+        <div class="variety-card">
+                    <img src="illustrations/photos/maturity_green.jpg" alt="False Horn">
+                    <div class="vname">False Horn</div>
+                    <div class="vpremium">0% — baseline price</div>
+                    <div class="vnote">most common cooking plantain</div>
+                </div>
+                <div class="variety-card">
+                    <img src="illustrations/photos/variety_th.jpg" alt="True Horn">
+                    <div class="vname">True Horn</div>
+                    <div class="vpremium">+5% to +10%</div>
+                    <div class="vnote">larger fingers, urban wholesale</div>
+                </div>
+                <div class="variety-card">
+                    <img src="illustrations/photos/variety_rh.jpg" alt="Rhino Horn">
+                    <div class="vname">Rhino Horn</div>
+                    <div class="vpremium">+15% to +25%</div>
+                    <div class="vnote">premium restaurant & export</div>
+                </div>
+    </div>
+</div>
+
+<!-- ===================  §4-7  FOUR-COLUMN  =================== -->
+<div class="four-col">
+    <!-- §4 HOW TO ASSESS -->
+    <div class="col-card">
+        <h3>4 · Assess</h3>
+        <ol>
+            <li>Look at the whole bunch — fill &amp; uniformity</li>
+            <li>Check finger size and shape against variety</li>
+            <li>Inspect for defects, pests or disease</li>
+            <li>Press gently — fingers should be firm, not soft</li>
+            <li>Check the cut — clean stalk, not torn or split</li>
+        </ol>
+    </div>
+
+    <!-- §5 WEIGHING -->
+    <div class="col-card">
+        <h3>5 · Weigh</h3>
+        <div class="icon-row"><span class="ico">⚖</span><span class="txt"><strong>Calibrated scale only.</strong> Tare (zero) before each bunch.</span></div>
+        <div class="icon-row"><span class="ico">📋</span><span class="txt">Record <strong>net kg</strong> to one decimal (e.g. 25.4 kg).</span></div>
+        <div class="icon-row"><span class="ico">⚠</span><span class="txt"><strong>Shrinkage flag:</strong> if net &lt; farm weight by &gt; 5%, flag for review.</span></div>
+        <div class="icon-row"><span class="ico">📍</span><span class="txt">Weigh at the farm — not at the collection point.</span></div>
+    </div>
+
+    <!-- §6 RECORD -->
+    <div class="col-card">
+        <h3>6 · Record</h3>
+        <div class="icon-row"><span class="ico">📅</span><span class="txt"><strong>Date</strong> · <strong>Outgrower ID</strong></span></div>
+        <div class="icon-row"><span class="ico">📍</span><span class="txt"><strong>Location / farm</strong></span></div>
+        <div class="icon-row"><span class="ico">🏷</span><span class="txt"><strong>Grade</strong> A · B · C · Reject</span></div>
+        <div class="icon-row"><span class="ico">⚖</span><span class="txt"><strong>Quantity</strong> (kg) · <strong>Price/kg</strong></span></div>
+        <div class="icon-row"><span class="ico">💵</span><span class="txt"><strong>Total paid</strong> · <strong>FO signature</strong></span></div>
+        <div class="icon-row"><span class="ico">📸</span><span class="txt">Photo of bunch + signed receipt</span></div>
+    </div>
+
+    <!-- §7 HANDLE & TRANSPORT -->
+    <div class="col-card">
+        <h3>7 · Handle &amp; Transport</h3>
+        <div class="icon-row"><span class="ico">🌿</span><span class="txt"><strong>Handle with care.</strong> Avoid throwing.</span></div>
+        <div class="icon-row"><span class="ico">⛔</span><span class="txt"><strong>No heavy loads</strong> stacked on plantain.</span></div>
+        <div class="icon-row"><span class="ico">🚚</span><span class="txt"><strong>Clean, ventilated</strong> transport vehicle.</span></div>
+        <div class="icon-row"><span class="ico">☂</span><span class="txt">Protect from <strong>sun &amp; rain</strong>.</span></div>
+        <div class="icon-row"><span class="ico">⏱</span><span class="txt"><strong>Deliver ASAP</strong> to collection point.</span></div>
+    </div>
+</div>
+
+<!-- ===================  FOOTER  =================== -->
+<div class="footer">
+    <div class="footer-icon" aria-label="handshake">
+        <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 38 L20 30 L26 32 L34 28 L42 34 L56 26" stroke="#2E7D32" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M20 30 L24 36 L18 40" stroke="#2E7D32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M34 28 L40 34 L34 38" stroke="#2E7D32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M8 38 L14 44" stroke="#2E7D32" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <path d="M56 26 L52 32" stroke="#2E7D32" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <circle cx="14" cy="46" r="2.5" fill="#2E7D32"/>
+            <circle cx="50" cy="30" r="2.5" fill="#2E7D32"/>
+        </svg>
+    </div>
+    <div class="footer-text">
+        <div class="footer-tagline">Good quality today, better returns tomorrow.</div>
+        <div class="footer-sub">Thank the farmer · encourage good practices · build long-term relationships.</div>
+    </div>
+    <div class="footer-meta">
+        POP Field Officer Quick Guide<br>
+        Edition 1.0 · A3 wall poster<br>
+        Print at 100% (no scaling)
+    </div>
+</div>
+
+</body>
+</html>
